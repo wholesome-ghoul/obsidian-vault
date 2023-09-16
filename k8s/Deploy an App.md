@@ -6,6 +6,8 @@ self-healing
 
 common:
 
+[[Shell cmds#get resource]]
+
 ```bash
 kubectl <action> resource
 

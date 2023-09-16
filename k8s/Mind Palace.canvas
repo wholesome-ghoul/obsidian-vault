@@ -2,13 +2,13 @@
 	"nodes":[
 		{"id":"591b094dd1670674","type":"file","file":"k8s/Viewing Pods and Nodes.md","x":1020,"y":280,"width":420,"height":80},
 		{"id":"16ca6bf0cc576693","type":"file","file":"k8s/K8s Cluster.md","x":-440,"y":-220,"width":520,"height":180},
-		{"id":"0b8b315788591bb7","type":"file","file":"k8s/Deploy an App.md","x":220,"y":-220,"width":680,"height":400},
+		{"id":"0b8b315788591bb7","type":"file","file":"k8s/Deploy an App.md","x":220,"y":-220,"width":680,"height":460},
 		{"id":"ce8dc713d85dce79","type":"file","file":"k8s/Excalidraw/Node-graph.md","x":1520,"y":891,"width":600,"height":749},
 		{"id":"fe3980dd61311a56","type":"file","file":"k8s/Using a Service to Expose an App.md","x":2000,"y":280,"width":560,"height":80},
 		{"id":"9432fe41fc95253a","type":"file","file":"k8s/Performing Rolling Update.md","x":2720,"y":300,"width":480,"height":260},
 		{"id":"007fab58be897ee4","type":"file","file":"k8s/Building-blocks/Node.md","x":1520,"y":540,"width":404,"height":193},
 		{"id":"405850d65e65b494","type":"file","file":"k8s/Excalidraw/Pod-graph.md","x":570,"y":1024,"width":660,"height":700},
-		{"id":"7bac9ca9dbfc5e46","type":"file","file":"k8s/Building-blocks/Pod.md","x":500,"y":533,"width":400,"height":400}
+		{"id":"7bac9ca9dbfc5e46","type":"file","file":"k8s/Building-blocks/Pod.md","x":500,"y":533,"width":400,"height":387}
 	],
 	"edges":[
 		{"id":"637fe54b5810a756","fromNode":"16ca6bf0cc576693","fromSide":"right","toNode":"0b8b315788591bb7","toSide":"left"},

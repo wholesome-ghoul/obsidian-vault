@@ -2285,8 +2285,8 @@ Node ^62GkEnA4
 		},
 		{
 			"type": "text",
-			"version": 119,
-			"versionNonce": 1658519805,
+			"version": 123,
+			"versionNonce": 1229369142,
 			"isDeleted": false,
 			"id": "62GkEnA4",
 			"fillStyle": "hachure",
@@ -2306,7 +2306,7 @@ Node ^62GkEnA4
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1694854749591,
+			"updated": 1694857556992,
 			"link": null,
 			"locked": false,
 			"fontSize": 52.24965356453461,
@@ -2336,10 +2336,10 @@ Node ^62GkEnA4
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 586.8681097395643,
-		"scrollY": 314.76153266403855,
+		"scrollX": 543.8568200852083,
+		"scrollY": 110.4041126385887,
 		"zoom": {
-			"value": 1.1
+			"value": 1.2000000000000002
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,

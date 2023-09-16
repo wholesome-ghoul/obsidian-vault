@@ -4,20 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "c094747a22e27733",
+        "id": "e73b0050da26d0a2",
         "type": "tabs",
         "children": [
           {
-            "id": "621f3267105a0941",
+            "id": "0a14ab9414023c83",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
                 "file": "k8s/Mind Palace.canvas",
                 "viewState": {
-                  "x": 2031.738243585063,
-                  "y": 960.0762024894283,
-                  "zoom": -1.8162097199437457
+                  "x": 1013.9400298114629,
+                  "y": 424.5644813516959,
+                  "zoom": -0.6162097199437458
                 }
               }
             }
@@ -158,15 +158,17 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "c565b2560b0c5505",
+  "active": "0a14ab9414023c83",
   "lastOpenFiles": [
-    "k8s/Building-blocks/Pod.md",
-    "k8s/Mind Palace.canvas",
-    "k8s/Viewing Pods and Nodes.md",
-    "k8s/Using a Service to Expose an App.md",
+    "k8s/Shell cmds.md",
     "k8s/Performing Rolling Update.md",
-    "k8s/K8s Cluster.md",
+    "k8s/Mind Palace.canvas",
+    "k8s/Using a Service to Expose an App.md",
     "k8s/Deploy an App.md",
+    "k8s/K8s Cluster.md",
+    "k8s/Viewing Pods and Nodes.md",
+    "k8s/Excalidraw/Node-graph.md",
+    "k8s/Building-blocks/Pod.md",
     "k8s/Building-blocks/Control Plane.md",
     "k8s/Building-blocks/Deployment.md",
     "k8s/Building-blocks/Service.md",
@@ -174,7 +176,6 @@
     "k8s/Building-blocks/Container.md",
     "k8s/Building-blocks",
     "k8s/Building-blocks/Kubelet.md",
-    "k8s/Excalidraw/Node-graph.md",
     "k8s/Excalidraw/Pod-graph.md",
     "**Control Plane**.md",
     "Drawing 2023-09-16 13.06.53.excalidraw.md",
