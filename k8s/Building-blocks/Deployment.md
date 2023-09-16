@@ -1,0 +1,1 @@
+Instructs how to create and update **instances** of app.
