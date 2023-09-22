@@ -11,14 +11,11 @@
             "id": "0a14ab9414023c83",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "k8s/Mind Palace.canvas",
-                "viewState": {
-                  "x": 1013.9400298114629,
-                  "y": 424.5644813516959,
-                  "zoom": -0.6162097199437458
-                }
+                "file": "GoLang/Notes.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -96,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "k8s/Mind Palace.canvas",
+                "file": "GoLang/Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "k8s/Mind Palace.canvas",
+                "file": "GoLang/Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "k8s/Mind Palace.canvas"
+                "file": "GoLang/Notes.md"
               }
             }
           }
@@ -160,9 +157,11 @@
   },
   "active": "0a14ab9414023c83",
   "lastOpenFiles": [
+    "k8s/Mind Palace.canvas",
+    "GoLang/Notes.md",
+    "GoLang",
     "k8s/Shell cmds.md",
     "k8s/Performing Rolling Update.md",
-    "k8s/Mind Palace.canvas",
     "k8s/Using a Service to Expose an App.md",
     "k8s/Deploy an App.md",
     "k8s/K8s Cluster.md",
