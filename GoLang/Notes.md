@@ -24,5 +24,25 @@ os.MkdirAll(path, perm)
 // get file (*os.File) name
 f.Name()
 f.Write(bytes)
+f.Read(bytes)
 f.Close()
+```
+
+## go cli
+
+```bash
+# view coverage as html
+go tool cover -html="coverage.out"
+go tool cover -html="coverage.out" -o coverage.html
+# check cpu prof
+go tool pprof cpu.pprof
+
+# generate benchmark
+go test -bench=. -run=xxx -benchmem -memprofile mem.pprof -cpuprofile cpu.pprof -benchtime=10s > 0.bench
+
+# compare benchmarks
+benchstat 0.bench 1.bench
+
+# get doc
+go doc sync.WaitGroup
 ```
