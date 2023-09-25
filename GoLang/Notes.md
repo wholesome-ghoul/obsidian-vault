@@ -46,3 +46,74 @@ benchstat 0.bench 1.bench
 # get doc
 go doc sync.WaitGroup
 ```
+
+## goroutines
+
+- by default, `sends` and `receives` block until the other side is ready.
+- channels can be buffered.
+- only `sender` should close a channel, never `receiver`. Sending on a closed channel will cause a panic.
+- closing is not always necessary.
+
+```go
+// `select` example
+func fibonacci(c int, quit chan int) {
+	x, y := 0, 1
+	for {
+		select {
+			case c <- x:
+				x, y = y, x + y
+			case <- quit:
+				fmt.Println("quit")
+				return
+		}
+	}
+}
+
+func main() {
+	c := make(chan int)
+	quit := make(chan int)
+	go func() {
+		for i := 0; i < 10; i++ {
+			fmt.Println(<-c)
+		}
+		quit <- 0
+	}()
+	fibonacci(c, quit)
+}
+```
+
+## mutex
+
+```go
+type SaveCounter struct {
+	mu sync.Mutex
+	v map[string]int
+}
+
+func (c *SafeCounter) Inc(key string) {
+	c.mu.Lock()
+	c.v[key]++
+	c.mu.Unlock()
+}
+
+func (c *SafeCounter) Value(key string) int {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	return c.v[key]
+}
+
+func main() {
+	c := SafeCounter{v: make(map[string]int)}
+	var wg sync.WaitGroup
+	for i := 0; i < 1000; i++ {
+		wg.Add(1)
+		func() {
+			defer wg.Done()
+			go c.Inc("somekey")
+		}()
+	}
+
+	wg.Wait()
+	fmt.Println(c.Value("somekey"))
+}
+```
