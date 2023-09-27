@@ -45,6 +45,10 @@ benchstat 0.bench 1.bench
 
 # get doc
 go doc sync.WaitGroup
+
+# in the root
+go work init
+go work use <name-of-module>
 ```
 
 ## goroutines
