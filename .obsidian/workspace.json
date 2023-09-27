@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "microservices/Notes.md",
+                "file": "FE/UX Design/Understanding Human Decision Making.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "61366322d1ec6ec2",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "microservices/Notes.md",
+                "file": "FE/UX Design/Understanding Human Decision Making.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "microservices/Notes.md",
+                "file": "FE/UX Design/Understanding Human Decision Making.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "microservices/Notes.md"
+                "file": "FE/UX Design/Understanding Human Decision Making.md"
               }
             }
           }
@@ -157,10 +158,15 @@
   },
   "active": "0a14ab9414023c83",
   "lastOpenFiles": [
+    "General/Notes.md",
+    "FE/UX Design/Understanding Human Decision Making.md",
+    "General",
+    "microservices/Notes.md",
+    "FE/UX Design",
+    "FE",
     "Pasted image 20230927071712.png",
     "Pasted image 20230927071549.png",
     "Pasted image 20230927071518.png",
-    "microservices/Notes.md",
     "Pasted image 20230927070746.png",
     "Pasted image 20230927071124.png",
     "k8s/Excalidraw/Node-graph.md",
