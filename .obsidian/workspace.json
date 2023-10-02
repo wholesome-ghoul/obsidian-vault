@@ -11,15 +11,51 @@
             "id": "0a14ab9414023c83",
             "type": "leaf",
             "state": {
+              "type": "canvas",
+              "state": {
+                "file": "k8s/Mind Palace.canvas",
+                "viewState": {
+                  "x": 1437.4524259714071,
+                  "y": 1533.255097414239,
+                  "zoom": -1.2004397181410922
+                }
+              }
+            }
+          },
+          {
+            "id": "cb6e8fbc044c89e2",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Blog/Component Library/requirements-for-the-project.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "bd263831a0eb4ce6",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Blog/Component Library/requirements-for-the-project.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "fbeefcaa7c9d61d1",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "FE/UX Design/Understanding Human Decision Making.md",
+                "file": "docker/Notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -77,8 +113,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 323.5
   },
   "right": {
     "id": "61366322d1ec6ec2",
@@ -94,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "FE/UX Design/Understanding Human Decision Making.md",
+                "file": "docker/Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "FE/UX Design/Understanding Human Decision Making.md",
+                "file": "docker/Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FE/UX Design/Understanding Human Decision Making.md"
+                "file": "docker/Notes.md"
               }
             }
           }
@@ -156,10 +191,28 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "0a14ab9414023c83",
+  "active": "fbeefcaa7c9d61d1",
   "lastOpenFiles": [
-    "General/Notes.md",
+    "Blog/Component Library/requirements-for-the-project.excalidraw.md",
+    "docker/Notes.md",
+    "docker",
+    "Blog/Component Library/info.excalidraw.md",
+    "Blog/Component Library/requirements-for-the-project.excalidraw.svg",
+    "Pasted image 20230927071124.png",
+    "k8s/Mind Palace.canvas",
+    "Blog/Component Library",
+    "Blog",
+    "k8s/Deploy an App.md",
+    "k8s/Building-blocks/Service.md",
+    "k8s/Building-blocks/Pod.md",
+    "k8s/Building-blocks/Node.md",
+    "k8s/Building-blocks/Kubelet.md",
+    "k8s/Building-blocks/Deployment.md",
+    "k8s/Building-blocks/Control Plane.md",
+    "k8s/Building-blocks/Container.md",
     "FE/UX Design/Understanding Human Decision Making.md",
+    "GoLang/Notes.md",
+    "General/Notes.md",
     "General",
     "microservices/Notes.md",
     "FE/UX Design",
@@ -168,35 +221,19 @@
     "Pasted image 20230927071549.png",
     "Pasted image 20230927071518.png",
     "Pasted image 20230927070746.png",
-    "Pasted image 20230927071124.png",
     "k8s/Excalidraw/Node-graph.md",
-    "GoLang/Notes.md",
     "microservices",
     "psql/Notes.md",
     "psql",
-    "k8s/Mind Palace.canvas",
     "GoLang",
     "k8s/Shell cmds.md",
     "k8s/Performing Rolling Update.md",
     "k8s/Using a Service to Expose an App.md",
-    "k8s/Deploy an App.md",
     "k8s/K8s Cluster.md",
     "k8s/Viewing Pods and Nodes.md",
-    "k8s/Building-blocks/Pod.md",
-    "k8s/Building-blocks/Control Plane.md",
-    "k8s/Building-blocks/Deployment.md",
-    "k8s/Building-blocks/Service.md",
-    "k8s/Building-blocks/Node.md",
-    "k8s/Building-blocks/Container.md",
     "k8s/Building-blocks",
-    "k8s/Building-blocks/Kubelet.md",
     "k8s/Excalidraw/Pod-graph.md",
     "**Control Plane**.md",
-    "Drawing 2023-09-16 13.06.53.excalidraw.md",
-    "Untitled.md",
-    "Untitled 1.md",
-    "k8s/Excalidraw",
-    "2023-09-16.md",
-    "k8s"
+    "Drawing 2023-09-16 13.06.53.excalidraw.md"
   ]
 }
