@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"ab843f675ca53be8","type":"file","file":"microservices/Advantages.md","x":-595,"y":-109,"width":400,"height":400},
+		{"id":"29192fb6ca582fdf","type":"file","file":"microservices/Pain Points.md","x":-180,"y":-109,"width":400,"height":400},
+		{"id":"39a5ce24ab93ed30","type":"file","file":"microservices/Cohesion & Coupling.md","x":820,"y":-109,"width":400,"height":400},
+		{"id":"ca78ae75b016cd08","type":"file","file":"microservices/drawings/couplings.excalidraw.md","x":1480,"y":-340,"width":461,"height":545},
+		{"id":"4b7fb1566f8c1e52","x":280,"y":520,"width":483,"height":392,"type":"file","file":"microservices/drawings/domain-coupling.excalidraw.md"}
+	],
+	"edges":[
+		{"id":"d6987e3a8af3b643","fromNode":"39a5ce24ab93ed30","fromSide":"right","toNode":"ca78ae75b016cd08","toSide":"left"},
+		{"id":"e6fe6d47ff28726e","fromNode":"39a5ce24ab93ed30","fromSide":"left","toNode":"4b7fb1566f8c1e52","toSide":"top"}
+	]
+}

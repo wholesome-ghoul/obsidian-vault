@@ -31,6 +31,8 @@ docker container prune
 docker ps --all
 
 docker exec -it <container name or id> bash
+# jump into running container as a root
+docker exec -u root -it <container name or id> bash
 
 docker login
 

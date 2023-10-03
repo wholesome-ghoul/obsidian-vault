@@ -77,6 +77,75 @@
         "status": "unpublished",
         "elements": [
           {
+            "type": "line",
+            "version": 442,
+            "versionNonce": 339786110,
+            "isDeleted": false,
+            "id": "GBh1nictSl5Zi5rrUiRYB",
+            "fillStyle": "solid",
+            "strokeWidth": 1,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0.5269625314092794,
+            "x": -61.74348930635709,
+            "y": -379.95211334979416,
+            "strokeColor": "#000000",
+            "backgroundColor": "#ffec99",
+            "width": 274.5509566263498,
+            "height": 317.0242852415921,
+            "seed": 2101717886,
+            "groupIds": [],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [],
+            "updated": 1696322526702,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                67.99347831317488,
+                0
+              ],
+              [
+                205.2689566263498,
+                79.25607131039803
+              ],
+              [
+                205.2689566263498,
+                237.76821393119405
+              ],
+              [
+                67.99347831317488,
+                317.0242852415921
+              ],
+              [
+                -69.282,
+                237.76821393119405
+              ],
+              [
+                -69.282,
+                79.25607131039803
+              ],
+              [
+                67.99347831317488,
+                0
+              ]
+            ]
+          }
+        ],
+        "id": "K_55V163O5Qoa5DWwwVBx",
+        "created": 1696322532300
+      },
+      {
+        "status": "unpublished",
+        "elements": [
+          {
             "type": "rectangle",
             "version": 716,
             "versionNonce": 1796301598,
