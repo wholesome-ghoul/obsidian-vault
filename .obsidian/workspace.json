@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "microservices/Mind Palace - Microservices.canvas",
+                "file": "microservices/Advantages.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "microservices/Mind Palace - Microservices.canvas",
+                "file": "microservices/Advantages.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "microservices/Mind Palace - Microservices.canvas"
+                "file": "microservices/Advantages.md"
               }
             }
           }

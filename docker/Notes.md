@@ -39,6 +39,8 @@ docker login
 docker tag <local-image>:tag <username>/<remote-name>:tag
 
 docker push <username>/<remote-name>:tag
+
+docker history [options] <image>
 ```
 
 ```bash

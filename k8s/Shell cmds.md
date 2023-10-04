@@ -3,9 +3,14 @@
 ```bash
 minikube start
 
+eval $(minikube docker-env)
+
 minikube kubectl -- get pods -A
 
 minikube dashboard [--url]
+
+# get service url
+minikube service <service-name> --url
 
 # automatically open service in browser
 minikube service hello-node
@@ -36,6 +41,7 @@ kubectl delete deployments/<name> services/<name>
 kubectl proxy
 
 kubectl logs <pod-name>
+kubectl logs <pod-name> -c <container-name>
 
 # kubectl exec <pod-name> -- <cmd>
 # start bash session
@@ -82,6 +88,8 @@ kubectl expose deployment hello-node \
 # confirm update
 kubectl rollout status deployments/<name>
 kubectl rollout undo deployments/<name>
+
+kubectl edit svg/<service-name>
 ```
 
 ## Exposing an External IP Address to Access an Application in a Cluster
