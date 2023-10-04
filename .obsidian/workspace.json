@@ -53,14 +53,11 @@
             "id": "3a1f5f01badb9ed3",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "microservices/Mind Palace - Microservices.canvas",
-                "viewState": {
-                  "x": -234.05845972601014,
-                  "y": 424.47832445481276,
-                  "zoom": -0.8450004395020411
-                }
+                "file": "k8s/questions.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -139,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "microservices/Advantages.md",
+                "file": "k8s/questions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "microservices/Advantages.md",
+                "file": "k8s/questions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "microservices/Advantages.md"
+                "file": "k8s/questions.md"
               }
             }
           }
@@ -201,8 +198,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "c565b2560b0c5505",
+  "active": "3a1f5f01badb9ed3",
   "lastOpenFiles": [
+    "k8s/Questions",
+    "microservices/Advantages.md",
+    "k8s/questions.md",
     "k8s/ram.md",
     "microservices/Notes.md",
     "microservices/drawings/domain-coupling.excalidraw.md",
@@ -215,7 +215,6 @@
     "Pasted image 20230927071549.png",
     "microservices/Cohesion & Coupling.md",
     "microservices/Pain Points.md",
-    "microservices/Advantages.md",
     "Blog/Component Library/requirements-for-the-project.excalidraw.md",
     "k8s/Mind Palace.canvas",
     "docker/Notes.md",
@@ -245,8 +244,6 @@
     "psql/Notes.md",
     "psql",
     "GoLang",
-    "k8s/Shell cmds.md",
-    "k8s/Performing Rolling Update.md",
-    "k8s/Using a Service to Expose an App.md"
+    "k8s/Shell cmds.md"
   ]
 }
