@@ -1,0 +1,1 @@
+Read only template of instructions for creating Docker containers.

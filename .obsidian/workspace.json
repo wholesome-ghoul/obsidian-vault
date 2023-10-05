@@ -4,65 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "e73b0050da26d0a2",
+        "id": "53331d4dc1d3b863",
         "type": "tabs",
         "children": [
           {
-            "id": "fbeefcaa7c9d61d1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "microservices/Advantages.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "40fc4b7b9619fcea",
+            "id": "7832488b0c7dc8ed",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
-                "file": "microservices/Mind Palace - Microservices.canvas",
+                "file": "docker/journey.canvas",
                 "viewState": {
-                  "x": 816.2648967794545,
-                  "y": 446.26825908649135,
-                  "zoom": -0.8000000000000002
+                  "x": 166.64148276805818,
+                  "y": 24.686535370349873,
+                  "zoom": 0
                 }
-              }
-            }
-          },
-          {
-            "id": "588befa66eef56f1",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "microservices/Mind Palace - Microservices.canvas",
-                "viewState": {
-                  "x": 1360.9696072118481,
-                  "y": 34.77675466838383,
-                  "zoom": -0.8450004395020412
-                }
-              }
-            }
-          },
-          {
-            "id": "3a1f5f01badb9ed3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "k8s/questions.md",
-                "mode": "source",
-                "source": false
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -120,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 323.5,
+    "collapsed": true
   },
   "right": {
     "id": "61366322d1ec6ec2",
@@ -136,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "k8s/questions.md",
+                "file": "docker/journey.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "k8s/questions.md",
+                "file": "docker/journey.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "k8s/questions.md"
+                "file": "docker/journey.canvas"
               }
             }
           }
@@ -198,11 +159,26 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "3a1f5f01badb9ed3",
+  "active": "7832488b0c7dc8ed",
   "lastOpenFiles": [
+    "docker/Docker Container.md",
+    "docker/Docker Image.md",
+    "k8s/Building-blocks/Container.md",
+    "docker/journey.canvas",
+    "BE/journey.canvas",
+    "docker/Notes.md",
+    "docker/Docker.md",
+    "docker/Untitled",
+    "k8s/journey.canvas",
+    "k8s/Mind Palace.canvas",
+    "k8s/K8s Objects.md",
+    "Untitled.md",
+    "BE/Memory Management.md",
+    "BE/Terminal cmds.md",
+    "k8s/questions.md",
+    "BE",
     "k8s/Questions",
     "microservices/Advantages.md",
-    "k8s/questions.md",
     "k8s/ram.md",
     "microservices/Notes.md",
     "microservices/drawings/domain-coupling.excalidraw.md",
@@ -216,8 +192,6 @@
     "microservices/Cohesion & Coupling.md",
     "microservices/Pain Points.md",
     "Blog/Component Library/requirements-for-the-project.excalidraw.md",
-    "k8s/Mind Palace.canvas",
-    "docker/Notes.md",
     "docker",
     "Blog/Component Library/info.excalidraw.md",
     "Blog/Component Library/requirements-for-the-project.excalidraw.svg",
@@ -230,20 +204,10 @@
     "k8s/Building-blocks/Kubelet.md",
     "k8s/Building-blocks/Deployment.md",
     "k8s/Building-blocks/Control Plane.md",
-    "k8s/Building-blocks/Container.md",
-    "FE/UX Design/Understanding Human Decision Making.md",
-    "GoLang/Notes.md",
-    "General/Notes.md",
     "General",
     "FE/UX Design",
     "FE",
     "Pasted image 20230927071518.png",
-    "Pasted image 20230927070746.png",
-    "k8s/Excalidraw/Node-graph.md",
-    "microservices",
-    "psql/Notes.md",
-    "psql",
-    "GoLang",
-    "k8s/Shell cmds.md"
+    "Pasted image 20230927070746.png"
   ]
 }

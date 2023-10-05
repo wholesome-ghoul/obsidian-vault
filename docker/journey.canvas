@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"5b5522d99515ae25","type":"text","text":"# Docker\n\nOpen source platform for developing, shipping and running applications. Helping us with the consistent delivery of apps.","x":-275,"y":-262,"width":535,"height":142},
+		{"id":"faace50e3257fe02","type":"text","text":"# Architecture\n\n- Docker client\n- Docker daemon (dockerd)\n- Docker registry","x":-273,"y":-80,"width":531,"height":167},
+		{"id":"f45b0df1fac893cd","type":"text","text":"# Objects\n\n- Images\n- Containers","x":-273,"y":123,"width":531,"height":137},
+		{"id":"44f828c88bbf11ae","type":"file","file":"docker/Docker Image.md","x":380,"y":167,"width":280,"height":50,"color":"4"},
+		{"id":"e92025005cae8387","x":700,"y":167,"width":340,"height":50,"color":"4","type":"file","file":"docker/Docker Container.md"},
+		{"id":"9374445bdb38582f","x":1133,"y":136,"width":567,"height":344,"type":"text","text":"# Example: docker run\n\n```bash\ndocker run -i -t ubuntu /bin/bash\n```\n\n1. Docker pulls `ubuntu` image from the registry if it does not exist locally (manually - `docker pull ubuntu`)\n2. Docker creates a new container (manually - `docker container create`)\n3. Docker allocates a read-write filesystem to the container, as its final layer. This allows a running container to create or modify files and directories in its local filesystem.\n4. Docker creates a network interface to connect the container to the default network.\n5. Docker starts the container and executes `/bin/bash`. Because the container is running interactively and attached to your terminal, you can provide input using keyboard while Docker logs the output to your terminal.\n6. When you `exit` to terminate `/bin/bash` command, the container stops but isn't removed. You can start it again or remove it."}
+	],
+	"edges":[
+		{"id":"8baa32d33fa4ed7c","fromNode":"5b5522d99515ae25","fromSide":"bottom","toNode":"faace50e3257fe02","toSide":"top"},
+		{"id":"3e1bfebc4f5d616e","fromNode":"faace50e3257fe02","fromSide":"bottom","toNode":"f45b0df1fac893cd","toSide":"top"},
+		{"id":"c3f83c6d3568acf6","fromNode":"f45b0df1fac893cd","fromSide":"right","toNode":"44f828c88bbf11ae","toSide":"left"},
+		{"id":"6aa2e07e08402948","fromNode":"44f828c88bbf11ae","fromSide":"right","toNode":"e92025005cae8387","toSide":"left"},
+		{"id":"f1d63a41361bc6e6","fromNode":"e92025005cae8387","fromSide":"right","toNode":"9374445bdb38582f","toSide":"left"}
+	]
+}

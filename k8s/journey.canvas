@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"d124618069cccfb6","type":"text","text":"K8s","x":-154,"y":-283,"width":250,"height":60},
+		{"id":"2dd464c25dac0e24","type":"text","text":"Why","x":-154,"y":-180,"width":250,"height":60},
+		{"id":"5e66142a558d1444","x":-229,"y":-60,"width":400,"height":60,"type":"file","file":"k8s/K8s Objects.md"}
+	],
+	"edges":[
+		{"id":"8f37548689a3abbd","fromNode":"d124618069cccfb6","fromSide":"bottom","toNode":"2dd464c25dac0e24","toSide":"top"},
+		{"id":"b90fdde86644bbb9","fromNode":"2dd464c25dac0e24","fromSide":"bottom","toNode":"5e66142a558d1444","toSide":"top"}
+	]
+}

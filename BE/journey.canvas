@@ -1,0 +1,29 @@
+{
+	"nodes":[
+		{"id":"4a92e1ddf63a8dc8","type":"text","text":"Backend","x":-380,"y":-120,"width":250,"height":60},
+		{"id":"4ad4c48fae2d1d41","type":"text","text":"Internet","x":-380,"y":-20,"width":250,"height":60},
+		{"id":"e4320e160d6c9d29","type":"text","text":"DNS","x":-380,"y":80,"width":250,"height":60},
+		{"id":"f0ad475945e505f0","type":"text","text":"Hosting","x":-380,"y":180,"width":250,"height":60},
+		{"id":"bf887a80575cdea1","type":"text","text":"Browser","x":-380,"y":280,"width":250,"height":60},
+		{"id":"c7a75ca9b12c77c7","type":"text","text":"VCS","x":-380,"y":380,"width":250,"height":60},
+		{"id":"262533f894d861ef","type":"text","text":"OS & General Knowledge","x":-395,"y":480,"width":280,"height":60},
+		{"id":"b8eaf23e06872173","type":"text","text":"POSIX Basics","x":-40,"y":480,"width":250,"height":60,"color":"2"},
+		{"id":"1552443ac637d7b7","type":"file","file":"BE/Terminal cmds.md","x":280,"y":480,"width":280,"height":60,"color":"4"},
+		{"id":"14eb0f05fb248fde","type":"text","text":"OS","x":-40,"y":580,"width":250,"height":60,"color":"2"},
+		{"id":"efa7d10b4249799b","x":280,"y":580,"width":400,"height":60,"color":"4","type":"file","file":"BE/Memory Management.md"},
+		{"id":"65b4e905e637e321","type":"text","text":"Memory Management in GO","x":760,"y":580,"width":280,"height":60,"color":"2"}
+	],
+	"edges":[
+		{"id":"e980984ce87ef06c","fromNode":"4a92e1ddf63a8dc8","fromSide":"bottom","toNode":"4ad4c48fae2d1d41","toSide":"top"},
+		{"id":"d697e267aee830f2","fromNode":"4ad4c48fae2d1d41","fromSide":"bottom","toNode":"e4320e160d6c9d29","toSide":"top"},
+		{"id":"a0552d0c5500ea6f","fromNode":"e4320e160d6c9d29","fromSide":"bottom","toNode":"f0ad475945e505f0","toSide":"top"},
+		{"id":"d9d5b2efbe49c8ac","fromNode":"f0ad475945e505f0","fromSide":"bottom","toNode":"bf887a80575cdea1","toSide":"top"},
+		{"id":"9616964720e85e76","fromNode":"bf887a80575cdea1","fromSide":"bottom","toNode":"c7a75ca9b12c77c7","toSide":"top"},
+		{"id":"a2e07f024d235910","fromNode":"c7a75ca9b12c77c7","fromSide":"bottom","toNode":"262533f894d861ef","toSide":"top"},
+		{"id":"d3cc73ec010a2eb1","fromNode":"262533f894d861ef","fromSide":"right","toNode":"b8eaf23e06872173","toSide":"left"},
+		{"id":"8715411319a329fd","fromNode":"b8eaf23e06872173","fromSide":"right","toNode":"1552443ac637d7b7","toSide":"left"},
+		{"id":"e715608a31fbf925","fromNode":"262533f894d861ef","fromSide":"right","toNode":"14eb0f05fb248fde","toSide":"left"},
+		{"id":"b80db2588bf04682","fromNode":"14eb0f05fb248fde","fromSide":"right","toNode":"efa7d10b4249799b","toSide":"left"},
+		{"id":"f4d0fa7494d89da0","fromNode":"efa7d10b4249799b","fromSide":"right","toNode":"65b4e905e637e321","toSide":"left"}
+	]
+}
