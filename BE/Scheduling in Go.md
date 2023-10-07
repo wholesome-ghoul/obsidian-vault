@@ -21,33 +21,39 @@ Program is just a series of machine instructions that need to be executed one af
 - in the process of creating this illusion, the scheduler needs to run threads with higher priority over the lower priority ones.
 - the scheduler also needs to minimize scheduling latencies
 
-## Executing Instructions
+### Executing Instructions
 
 Program Counter (PC). Instruction Pointer (IP). Helps thread to keep track of the next instruction to execute.
 
-## Thread States
+### Thread States
 
 - Waiting (disk, network, os, sync calls like atomic and mutexes); root cause for bad performance
 - Runnable; can also be a cause of bad performance
 - Executing
 
-## Types of Work
+### Types of Work
 
 - CPU-Bound; this work never creates a situation where Thread maybe be placed in a Waiting state
 - IO-Bound; this is the work that causes Threads to enter into Waiting state.
 
-## Context Switching
+### Context Switching
 
 - physical act of swapping Threads on a core is called a context switch
 - context switch happens when scheduler pulls an Executing thread off a core and replaces it with a Runnable Thread.
 - is expensive, because it takes time to swap Threads on and off a core
 
-## Less is More
+### Less is More
 
-## Find Balance
+### Find Balance
 
-## Cache Lines
+### Cache Lines
 
-## False Sharing
+### False Sharing
 
-## Scheduling Decision Scenario
+### Scheduling Decision Scenario
+
+## Go Scheduler
+
+### Your Program Starts
+
+Logical Processor (P).

@@ -11,11 +11,14 @@
             "id": "d8d560fe32f80bcf",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "BE/Scheduling in Go.md",
-                "mode": "source",
-                "source": false
+                "file": "k8s/journey.canvas",
+                "viewState": {
+                  "x": -29,
+                  "y": 193.3,
+                  "zoom": 0
+                }
               }
             }
           }
@@ -77,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5,
-    "collapsed": true
+    "width": 323.5
   },
   "right": {
     "id": "61366322d1ec6ec2",
@@ -94,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BE/Scheduling in Go.md",
+                "file": "k8s/K8s Objects.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BE/Scheduling in Go.md",
+                "file": "k8s/K8s Objects.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BE/Scheduling in Go.md"
+                "file": "k8s/K8s Objects.md"
               }
             }
           }
@@ -158,11 +160,11 @@
   },
   "active": "d8d560fe32f80bcf",
   "lastOpenFiles": [
-    "BE/Memory Management in Go.md",
-    "BE/Scheduling in Go.md",
+    "k8s/K8s Objects.md",
+    "k8s/journey.canvas",
     "BE/journey.canvas",
-    "BE/Memory Management.md",
-    "BE/Terminal cmds.md",
+    "BE/Scheduling in Go.md",
+    "BE/Memory Management in Go.md",
     "DSA/Array.md",
     "DSA/journey.canvas",
     "Design System/journey.canvas",
@@ -190,11 +192,10 @@
     "docker/Notes.md",
     "docker/Docker.md",
     "docker/Untitled",
-    "k8s/journey.canvas",
     "k8s/Mind Palace.canvas",
-    "k8s/K8s Objects.md",
     "Untitled.md",
-    "k8s/questions.md",
+    "BE/Memory Management.md",
+    "BE/Terminal cmds.md",
     "BE",
     "k8s/Questions",
     "Pasted Image 20231003124641_928.png",
