@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"e9633789121c73a9","type":"text","text":"# Design Language","x":0,"y":-239,"width":338,"height":58},
+		{"id":"34ee725be50c3c18","type":"text","text":"# Core Components","x":0,"y":-80,"width":338,"height":58},
+		{"id":"bbd4d5af826ff2c8","type":"text","text":"# Maintenance","x":0,"y":0,"width":338,"height":58},
+		{"id":"bddb8d7b7cba96fd","type":"text","text":"# Foundations","x":0,"y":-157,"width":338,"height":58},
+		{"id":"169433e540753d71","type":"text","text":"# Design System","x":-420,"y":-128,"width":309,"height":60},
+		{"id":"65d68c887d61305a","type":"file","file":"Design System/Brand.md","x":740,"y":-528,"width":400,"height":400},
+		{"id":"4511f649924fafdd","x":740,"y":-80,"width":400,"height":400,"type":"file","file":"Design System/Guidelines.md"}
+	],
+	"edges":[
+		{"id":"6d2052e1af318dfb","fromNode":"169433e540753d71","fromSide":"right","toNode":"e9633789121c73a9","toSide":"left"},
+		{"id":"8baba2afb5297a6d","fromNode":"169433e540753d71","fromSide":"right","toNode":"bddb8d7b7cba96fd","toSide":"left"},
+		{"id":"8104357538ef8cee","fromNode":"169433e540753d71","fromSide":"right","toNode":"34ee725be50c3c18","toSide":"left"},
+		{"id":"6982f68bd1d036d8","fromNode":"169433e540753d71","fromSide":"right","toNode":"bbd4d5af826ff2c8","toSide":"left"},
+		{"id":"3c73a0021319b919","fromNode":"e9633789121c73a9","fromSide":"right","toNode":"65d68c887d61305a","toSide":"left"},
+		{"id":"6347f14f2a15669d","fromNode":"e9633789121c73a9","fromSide":"right","toNode":"4511f649924fafdd","toSide":"left"}
+	]
+}

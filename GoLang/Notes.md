@@ -1,4 +1,6 @@
 ```go
+import "reflect"
+
 filepath.Clean(path)
 // does not follow sym links
 // less efficient than WalkDir
@@ -26,11 +28,18 @@ f.Name()
 f.Write(bytes)
 f.Read(bytes)
 f.Close()
+
+t.Helper()
+
+func ExampleXxx() {
+	got := Xxx()
+	fmt.Println(got)
+	// Output: 6
+}
 ```
 
 ## go cli
-
-```bash
+ ```bash
 # view coverage as html
 go tool cover -html="coverage.out"
 go tool cover -html="coverage.out" -o coverage.html
@@ -39,12 +48,14 @@ go tool pprof cpu.pprof
 
 # generate benchmark
 go test -bench=. -run=xxx -benchmem -memprofile mem.pprof -cpuprofile cpu.pprof -benchtime=10s > 0.bench
+go test -cover
 
 # compare benchmarks
 benchstat 0.bench 1.bench
 
 # get doc
 go doc sync.WaitGroup
+godoc -http=:6060
 
 # in the root
 go work init

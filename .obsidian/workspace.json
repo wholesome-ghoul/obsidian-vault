@@ -4,21 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "53331d4dc1d3b863",
+        "id": "d6052e37399f1397",
         "type": "tabs",
         "children": [
           {
-            "id": "7832488b0c7dc8ed",
+            "id": "d8d560fe32f80bcf",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "docker/journey.canvas",
-                "viewState": {
-                  "x": 166.64148276805818,
-                  "y": 24.686535370349873,
-                  "zoom": 0
-                }
+                "file": "DSA/Array.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -80,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5,
-    "collapsed": true
+    "width": 323.5
   },
   "right": {
     "id": "61366322d1ec6ec2",
@@ -97,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docker/journey.canvas",
+                "file": "DSA/Array.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docker/journey.canvas",
+                "file": "DSA/Array.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docker/journey.canvas"
+                "file": "DSA/Array.md"
               }
             }
           }
@@ -159,12 +155,32 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "7832488b0c7dc8ed",
+  "active": "d8d560fe32f80bcf",
   "lastOpenFiles": [
+    "DSA/journey.canvas",
+    "Design System/journey.canvas",
+    "Design System/Guidelines.md",
+    "Design System/Brand.md",
+    "GoLang/Notes.md",
+    "Design System",
+    "GoLang/Untitled.md",
+    "go/journey.canvas",
+    "go",
+    "DSA/Stack.md",
+    "DSA/Queue.md",
+    "DSA/Linked List.md",
+    "DSA/Matrix.md",
+    "DSA/Sorting and Searching.md",
+    "DSA/Recursion.md",
+    "DSA/Hash Table.md",
+    "DSA/String.md",
+    "DSA/Array.md",
+    "DSA/Drawing 2023-10-06 18.59.27.excalidraw.md",
+    "docker/journey.canvas",
+    "DSA",
     "docker/Docker Container.md",
     "docker/Docker Image.md",
     "k8s/Building-blocks/Container.md",
-    "docker/journey.canvas",
     "BE/journey.canvas",
     "docker/Notes.md",
     "docker/Docker.md",
@@ -179,34 +195,16 @@
     "BE",
     "k8s/Questions",
     "microservices/Advantages.md",
-    "k8s/ram.md",
-    "microservices/Notes.md",
-    "microservices/drawings/domain-coupling.excalidraw.md",
     "Pasted Image 20231003124641_928.png",
     "microservices/Mind Palace - Microservices.canvas",
-    "microservices/drawings/couplings.excalidraw.md",
     "microservices/drawings",
     "Pasted image 20230927071124.png",
     "Pasted image 20230927071712.png",
     "Pasted image 20230927071549.png",
-    "microservices/Cohesion & Coupling.md",
-    "microservices/Pain Points.md",
-    "Blog/Component Library/requirements-for-the-project.excalidraw.md",
     "docker",
-    "Blog/Component Library/info.excalidraw.md",
     "Blog/Component Library/requirements-for-the-project.excalidraw.svg",
     "Blog/Component Library",
     "Blog",
-    "k8s/Deploy an App.md",
-    "k8s/Building-blocks/Service.md",
-    "k8s/Building-blocks/Pod.md",
-    "k8s/Building-blocks/Node.md",
-    "k8s/Building-blocks/Kubelet.md",
-    "k8s/Building-blocks/Deployment.md",
-    "k8s/Building-blocks/Control Plane.md",
-    "General",
-    "FE/UX Design",
-    "FE",
     "Pasted image 20230927071518.png",
     "Pasted image 20230927070746.png"
   ]

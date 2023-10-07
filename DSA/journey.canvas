@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"bf7450c2bbcf24b5","type":"file","file":"DSA/Array.md","x":-240,"y":-255,"width":220,"height":60},
+		{"id":"e1f7fec772c20b07","type":"file","file":"DSA/String.md","x":-240,"y":-140,"width":220,"height":54},
+		{"id":"ba900f7c7fba220b","type":"file","file":"DSA/Hash Table.md","x":-240,"y":-40,"width":220,"height":50},
+		{"id":"2a579e25727dd518","type":"file","file":"DSA/Recursion.md","x":-240,"y":80,"width":220,"height":50},
+		{"id":"b36714497e3c45cf","type":"file","file":"DSA/Sorting and Searching.md","x":-240,"y":200,"width":374,"height":50},
+		{"id":"d3624c7df56856a3","type":"file","file":"DSA/Matrix.md","x":-240,"y":309,"width":187,"height":51},
+		{"id":"34ca7231d4a5b7fa","type":"file","file":"DSA/Linked List.md","x":-240,"y":440,"width":220,"height":50},
+		{"id":"2b47a10bf411fa97","type":"file","file":"DSA/Queue.md","x":-240,"y":560,"width":209,"height":50},
+		{"id":"8eef760b2893d4e3","type":"file","file":"DSA/Stack.md","x":-240,"y":680,"width":165,"height":57},
+		{"id":"06f92a1b92ede83c","type":"text","text":"# DSA","x":-760,"y":185,"width":280,"height":80}
+	],
+	"edges":[
+		{"id":"de9689dba6392ae4","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"bf7450c2bbcf24b5","toSide":"left"},
+		{"id":"f0f28481f00edade","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"e1f7fec772c20b07","toSide":"left"},
+		{"id":"b1bb6bbcbd52cb5e","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"ba900f7c7fba220b","toSide":"left"},
+		{"id":"191fbec81df699c5","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"2a579e25727dd518","toSide":"left"},
+		{"id":"e951a5edc4f4beef","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"b36714497e3c45cf","toSide":"left"},
+		{"id":"437a270e56b1c8a9","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"d3624c7df56856a3","toSide":"left"},
+		{"id":"78bb407d17554f91","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"34ca7231d4a5b7fa","toSide":"left"},
+		{"id":"5e769e545b49115b","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"2b47a10bf411fa97","toSide":"left"},
+		{"id":"2ac64ca2232bc903","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"8eef760b2893d4e3","toSide":"left"}
+	]
+}
