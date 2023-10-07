@@ -17,3 +17,8 @@
 17. nslookup
 18. dig
 19. cal
+
+```bash
+# get hardware info
+lscpu
+```

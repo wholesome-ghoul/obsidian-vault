@@ -9,7 +9,11 @@
 		{"id":"34ca7231d4a5b7fa","type":"file","file":"DSA/Linked List.md","x":-240,"y":440,"width":220,"height":50},
 		{"id":"2b47a10bf411fa97","type":"file","file":"DSA/Queue.md","x":-240,"y":560,"width":209,"height":50},
 		{"id":"8eef760b2893d4e3","type":"file","file":"DSA/Stack.md","x":-240,"y":680,"width":165,"height":57},
-		{"id":"06f92a1b92ede83c","type":"text","text":"# DSA","x":-760,"y":185,"width":280,"height":80}
+		{"id":"ebc733b6e9ef8270","x":-240,"y":800,"width":165,"height":51,"type":"file","file":"DSA/Tree.md"},
+		{"id":"1507f7526b1edfe3","x":-242,"y":920,"width":211,"height":50,"type":"file","file":"DSA/Graph.md"},
+		{"id":"eab1353e608193ff","x":-240,"y":1040,"width":214,"height":56,"type":"file","file":"DSA/Heap.md"},
+		{"id":"f0116e2d6a1c38cf","x":-240,"y":1180,"width":175,"height":50,"type":"file","file":"DSA/Trie.md"},
+		{"id":"06f92a1b92ede83c","type":"text","text":"# DSA","x":-840,"y":425,"width":280,"height":80}
 	],
 	"edges":[
 		{"id":"de9689dba6392ae4","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"bf7450c2bbcf24b5","toSide":"left"},
@@ -20,6 +24,10 @@
 		{"id":"437a270e56b1c8a9","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"d3624c7df56856a3","toSide":"left"},
 		{"id":"78bb407d17554f91","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"34ca7231d4a5b7fa","toSide":"left"},
 		{"id":"5e769e545b49115b","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"2b47a10bf411fa97","toSide":"left"},
-		{"id":"2ac64ca2232bc903","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"8eef760b2893d4e3","toSide":"left"}
+		{"id":"2ac64ca2232bc903","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"8eef760b2893d4e3","toSide":"left"},
+		{"id":"6446d14be746c42d","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"ebc733b6e9ef8270","toSide":"left"},
+		{"id":"98a9ba48ad4cd061","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"1507f7526b1edfe3","toSide":"left"},
+		{"id":"9f1e6f5326dda616","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"eab1353e608193ff","toSide":"left"},
+		{"id":"6c4395cfc7ef886d","fromNode":"06f92a1b92ede83c","fromSide":"right","toNode":"f0116e2d6a1c38cf","toSide":"left"}
 	]
 }

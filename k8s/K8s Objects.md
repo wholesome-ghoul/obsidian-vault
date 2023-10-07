@@ -8,3 +8,79 @@ Required fields:
 - kind
 - metadata
 - spec
+
+## K8s Object Management
+
+| Management technique      | Operates on          | Recommended environenment |
+| ------------------------- | -------------------- | ------------------------- |
+| Imperative commands       | Live objects         | Dev projects              |
+| Imperative object config  | Individual files     | Prod projects             |
+| Declarative object config | Directories of files | Prod projects             |
+
+### Imperative commands
+
+```bash
+kubectl create deployment nginx --image nginx
+```
+
+### Imperative object config
+
+```bash
+kubectl create -f nginx.yaml
+kubectl delete -f nginx.yaml -f redis.yaml
+kubectl replace -f nginx.yaml
+```
+
+### Declarative object config
+
+```bash
+kubectl diff -f configs/
+kubectl apply -f configs/
+kubectl diff -R -f configs/
+kubectl apply -R -f configs/
+```
+
+## Object Names and IDs
+
+- DNS Subdomain Names
+- RFC 1123 Label Names
+- RFC 1035 Label Names
+- Path Segment Names
+
+## Labels and Selectors
+
+Examples:
+- `"release": "stable"`, `"release": "canary"`
+- `"environment": "dev"`, `"environment": "qa"`, `"environment": "production"`
+- `"tier": "frontend"`, `"tier": "backend"`, `"tier": "cache"`
+- `"track": "daily"`, `"track": "weekly"`
+
+## Syntax and Character Set
+
+## Label Selectors
+
+- equality based
+- set based
+
+### equality based
+
+`=`,`==`,`!=`
+
+### set based
+
+`in`, `notin`, `exists` (only the key identifier)
+```bash
+kubectl get pods -l environment=production,tier=frontend
+kubectl get pods -l 'environment in (production),tier in (frontend)'
+```
+
+### Resources that support set-based requirements
+
+`Job`, `Deployment`, `ReplicaSet`, `DaemonSet`
+
+### Updating labels
+
+```bash
+# labels all NGINX Pods as frontend tier
+kubectl label pods -l app=nginx tier=fe
+```

@@ -1,5 +1,6 @@
 ```go
 import "reflect"
+import "runtime"
 
 filepath.Clean(path)
 // does not follow sym links
@@ -29,13 +30,7 @@ f.Write(bytes)
 f.Read(bytes)
 f.Close()
 
-t.Helper()
-
-func ExampleXxx() {
-	got := Xxx()
-	fmt.Println(got)
-	// Output: 6
-}
+runtime.NumCPU()
 ```
 
 ## go cli
@@ -130,5 +125,33 @@ func main() {
 
 	wg.Wait()
 	fmt.Println(c.Value("somekey"))
+}
+```
+
+## tests
+
+```go
+import "testing"
+
+func TestXxx(t *testing.T) {
+	tableTests := []struct {
+		name string
+		expected int
+	} {
+		{name: "test name 1", expected: 1},
+		{name: "test name 2", expected: 2},
+	}
+
+	for _, tt := range tableTests {
+		t.Run(t.name, func(t *testing.T){
+			// ...
+		})
+	}
+}
+
+func ExampleXxx() {
+	got := Xxx()
+	fmt.Println(got)
+	// Output: 6
 }
 ```

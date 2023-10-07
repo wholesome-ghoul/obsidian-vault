@@ -4,21 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "d6052e37399f1397",
+        "id": "2778670be3efacf5",
         "type": "tabs",
         "children": [
           {
-            "id": "d8d560fe32f80bcf",
+            "id": "e1ffbe9f7b092c9b",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "k8s/journey.canvas",
-                "viewState": {
-                  "x": -29,
-                  "y": 193.3,
-                  "zoom": 0
-                }
+                "file": "BE/Terminal cmds.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -96,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "k8s/K8s Objects.md",
+                "file": "BE/Terminal cmds.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "k8s/K8s Objects.md",
+                "file": "BE/Terminal cmds.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "k8s/K8s Objects.md"
+                "file": "BE/Terminal cmds.md"
               }
             }
           }
@@ -158,19 +155,23 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d8d560fe32f80bcf",
+  "active": "e1ffbe9f7b092c9b",
   "lastOpenFiles": [
-    "k8s/K8s Objects.md",
-    "k8s/journey.canvas",
-    "BE/journey.canvas",
+    "GoLang/Notes.md",
+    "DSA/journey.canvas",
+    "DSA/Graph.md",
+    "DSA/Trie.md",
+    "DSA/Heap.md",
+    "DSA/Tree.md",
     "BE/Scheduling in Go.md",
     "BE/Memory Management in Go.md",
+    "BE/journey.canvas",
+    "BE/Memory Management.md",
+    "BE/Terminal cmds.md",
     "DSA/Array.md",
-    "DSA/journey.canvas",
     "Design System/journey.canvas",
     "Design System/Guidelines.md",
     "Design System/Brand.md",
-    "GoLang/Notes.md",
     "Design System",
     "GoLang/Untitled.md",
     "go/journey.canvas",
@@ -189,13 +190,9 @@
     "docker/Docker Container.md",
     "docker/Docker Image.md",
     "k8s/Building-blocks/Container.md",
-    "docker/Notes.md",
-    "docker/Docker.md",
     "docker/Untitled",
+    "k8s/journey.canvas",
     "k8s/Mind Palace.canvas",
-    "Untitled.md",
-    "BE/Memory Management.md",
-    "BE/Terminal cmds.md",
     "BE",
     "k8s/Questions",
     "Pasted Image 20231003124641_928.png",
