@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DSA/Array.md",
+                "file": "BE/Scheduling in Go.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 323.5,
+    "collapsed": true
   },
   "right": {
     "id": "61366322d1ec6ec2",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DSA/Array.md",
+                "file": "BE/Scheduling in Go.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DSA/Array.md",
+                "file": "BE/Scheduling in Go.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DSA/Array.md"
+                "file": "BE/Scheduling in Go.md"
               }
             }
           }
@@ -157,6 +158,12 @@
   },
   "active": "d8d560fe32f80bcf",
   "lastOpenFiles": [
+    "BE/Memory Management in Go.md",
+    "BE/Scheduling in Go.md",
+    "BE/journey.canvas",
+    "BE/Memory Management.md",
+    "BE/Terminal cmds.md",
+    "DSA/Array.md",
     "DSA/journey.canvas",
     "Design System/journey.canvas",
     "Design System/Guidelines.md",
@@ -174,14 +181,12 @@
     "DSA/Recursion.md",
     "DSA/Hash Table.md",
     "DSA/String.md",
-    "DSA/Array.md",
     "DSA/Drawing 2023-10-06 18.59.27.excalidraw.md",
     "docker/journey.canvas",
     "DSA",
     "docker/Docker Container.md",
     "docker/Docker Image.md",
     "k8s/Building-blocks/Container.md",
-    "BE/journey.canvas",
     "docker/Notes.md",
     "docker/Docker.md",
     "docker/Untitled",
@@ -189,12 +194,9 @@
     "k8s/Mind Palace.canvas",
     "k8s/K8s Objects.md",
     "Untitled.md",
-    "BE/Memory Management.md",
-    "BE/Terminal cmds.md",
     "k8s/questions.md",
     "BE",
     "k8s/Questions",
-    "microservices/Advantages.md",
     "Pasted Image 20231003124641_928.png",
     "microservices/Mind Palace - Microservices.canvas",
     "microservices/drawings",

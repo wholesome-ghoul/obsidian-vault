@@ -10,8 +10,8 @@
 		{"id":"b8eaf23e06872173","type":"text","text":"POSIX Basics","x":-40,"y":480,"width":250,"height":60,"color":"2"},
 		{"id":"1552443ac637d7b7","type":"file","file":"BE/Terminal cmds.md","x":280,"y":480,"width":280,"height":60,"color":"4"},
 		{"id":"14eb0f05fb248fde","type":"text","text":"OS","x":-40,"y":580,"width":250,"height":60,"color":"2"},
-		{"id":"efa7d10b4249799b","x":280,"y":580,"width":400,"height":60,"color":"4","type":"file","file":"BE/Memory Management.md"},
-		{"id":"65b4e905e637e321","type":"text","text":"Memory Management in GO","x":760,"y":580,"width":280,"height":60,"color":"2"}
+		{"id":"efa7d10b4249799b","type":"file","file":"BE/Memory Management.md","x":280,"y":580,"width":400,"height":60,"color":"4"},
+		{"id":"a62ee4863d0bc540","x":780,"y":480,"width":400,"height":400,"type":"file","file":"BE/Memory Management in Go.md"}
 	],
 	"edges":[
 		{"id":"e980984ce87ef06c","fromNode":"4a92e1ddf63a8dc8","fromSide":"bottom","toNode":"4ad4c48fae2d1d41","toSide":"top"},
@@ -24,6 +24,6 @@
 		{"id":"8715411319a329fd","fromNode":"b8eaf23e06872173","fromSide":"right","toNode":"1552443ac637d7b7","toSide":"left"},
 		{"id":"e715608a31fbf925","fromNode":"262533f894d861ef","fromSide":"right","toNode":"14eb0f05fb248fde","toSide":"left"},
 		{"id":"b80db2588bf04682","fromNode":"14eb0f05fb248fde","fromSide":"right","toNode":"efa7d10b4249799b","toSide":"left"},
-		{"id":"f4d0fa7494d89da0","fromNode":"efa7d10b4249799b","fromSide":"right","toNode":"65b4e905e637e321","toSide":"left"}
+		{"id":"e1ba097278d15fc9","fromNode":"efa7d10b4249799b","fromSide":"right","toNode":"a62ee4863d0bc540","toSide":"left"}
 	]
 }
