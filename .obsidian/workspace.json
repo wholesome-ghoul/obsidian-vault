@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BE/Terminal cmds.md",
+                "file": "error db/Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 323.5,
+    "collapsed": true
   },
   "right": {
     "id": "61366322d1ec6ec2",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BE/Terminal cmds.md",
+                "file": "error db/Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BE/Terminal cmds.md",
+                "file": "error db/Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BE/Terminal cmds.md"
+                "file": "error db/Notes.md"
               }
             }
           }
@@ -157,6 +158,12 @@
   },
   "active": "e1ffbe9f7b092c9b",
   "lastOpenFiles": [
+    "Blog/Component Library/Notes.md",
+    "BE/Terminal cmds.md",
+    "error db/Notes.md",
+    "error db",
+    "db",
+    "error",
     "GoLang/Notes.md",
     "DSA/journey.canvas",
     "DSA/Graph.md",
@@ -167,7 +174,6 @@
     "BE/Memory Management in Go.md",
     "BE/journey.canvas",
     "BE/Memory Management.md",
-    "BE/Terminal cmds.md",
     "DSA/Array.md",
     "Design System/journey.canvas",
     "Design System/Guidelines.md",
@@ -189,7 +195,6 @@
     "DSA",
     "docker/Docker Container.md",
     "docker/Docker Image.md",
-    "k8s/Building-blocks/Container.md",
     "docker/Untitled",
     "k8s/journey.canvas",
     "k8s/Mind Palace.canvas",
@@ -201,10 +206,7 @@
     "Pasted image 20230927071124.png",
     "Pasted image 20230927071712.png",
     "Pasted image 20230927071549.png",
-    "docker",
     "Blog/Component Library/requirements-for-the-project.excalidraw.svg",
-    "Blog/Component Library",
-    "Blog",
     "Pasted image 20230927071518.png",
     "Pasted image 20230927070746.png"
   ]
