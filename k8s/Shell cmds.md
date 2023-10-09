@@ -70,7 +70,7 @@ kubectl get services
 kubectl get rs
 kubectl get pods -l app=<label>
 # kubectl get pods --output=wide
-kubectl get pods [-o wide]
+kubectl get pods [-o wide|yaml]
 # view the pod and service
 kubectl get pod,svc -n kube-system
 ```
