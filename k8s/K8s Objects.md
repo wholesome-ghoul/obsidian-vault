@@ -84,3 +84,28 @@ kubectl get pods -l 'environment in (production),tier in (frontend)'
 # labels all NGINX Pods as frontend tier
 kubectl label pods -l app=nginx tier=fe
 ```
+
+## Namespaces
+Provides a mechanism for isolating groups of resources within a single cluster.
+
+> for a production cluster, consider not using the `default` namespace.
+
+### When to use multiple namespaces
+
+### Initial namespaces
+
+- `default`
+- `kube-node-lease`
+- `kube-public`
+- `kube-system`
+
+### Working with namespaces
+
+```bash
+kubectl get namespace
+```
+
+### Setting the namespace for a request
+
+```bash
+```
