@@ -26,6 +26,7 @@
 ### Sliding Windows
 
 - minimum subarray length
+- longest substring without repeating chars
 
 ### Two Pointers
 
