@@ -1,3 +1,5 @@
+## misc
+
 ```go
 import "reflect"
 import "runtime"
@@ -31,6 +33,8 @@ f.Read(bytes)
 f.Close()
 
 runtime.NumCPU()
+
+func (t T) String() string
 ```
 
 ## go cli
@@ -55,6 +59,8 @@ godoc -http=:6060
 # in the root
 go work init
 go work use <name-of-module>
+
+go install github.com/kisielk/errcheck/errcheck
 ```
 
 ## goroutines

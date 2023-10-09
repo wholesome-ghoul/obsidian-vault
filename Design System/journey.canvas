@@ -1,12 +1,18 @@
 {
 	"nodes":[
-		{"id":"e9633789121c73a9","type":"text","text":"# Design Language","x":0,"y":-239,"width":338,"height":58},
-		{"id":"34ee725be50c3c18","type":"text","text":"# Core Components","x":0,"y":-80,"width":338,"height":58},
-		{"id":"bbd4d5af826ff2c8","type":"text","text":"# Maintenance","x":0,"y":0,"width":338,"height":58},
-		{"id":"bddb8d7b7cba96fd","type":"text","text":"# Foundations","x":0,"y":-157,"width":338,"height":58},
-		{"id":"169433e540753d71","type":"text","text":"# Design System","x":-420,"y":-128,"width":309,"height":60},
-		{"id":"65d68c887d61305a","type":"file","file":"Design System/Brand.md","x":740,"y":-528,"width":400,"height":400},
-		{"id":"4511f649924fafdd","x":740,"y":-80,"width":400,"height":400,"type":"file","file":"Design System/Guidelines.md"}
+		{"id":"65d68c887d61305a","type":"file","file":"Design System/Brand.md","x":920,"y":-790,"width":400,"height":400},
+		{"id":"4511f649924fafdd","type":"file","file":"Design System/Guidelines.md","x":920,"y":-342,"width":400,"height":400},
+		{"id":"e9633789121c73a9","type":"text","text":"# Design Language","x":-20,"y":-419,"width":338,"height":58},
+		{"id":"52858a3499936924","x":920,"y":135,"width":400,"height":400,"type":"file","file":"Design System/Color.md"},
+		{"id":"df1e2ca3e8bac89d","x":920,"y":580,"width":400,"height":400,"type":"file","file":"Design System/Layout.md"},
+		{"id":"1676bafaa2cccc47","x":920,"y":1040,"width":400,"height":400,"type":"file","file":"Design System/Typography.md"},
+		{"id":"87d7356b54525de4","x":920,"y":1500,"width":400,"height":400,"type":"file","file":"Design System/Elevation.md"},
+		{"id":"7691b8ac5ad94ee9","x":920,"y":1960,"width":400,"height":400,"type":"file","file":"Design System/Motion.md"},
+		{"id":"65074d4d3c5f09cc","x":920,"y":2420,"width":400,"height":400,"type":"file","file":"Design System/Iconography.md"},
+		{"id":"169433e540753d71","type":"text","text":"# Design System","x":-760,"y":105,"width":309,"height":60},
+		{"id":"34ee725be50c3c18","type":"text","text":"# Core Components","x":0,"y":2302,"width":338,"height":58},
+		{"id":"bbd4d5af826ff2c8","type":"text","text":"# Maintenance","x":0,"y":2382,"width":338,"height":58},
+		{"id":"bddb8d7b7cba96fd","type":"text","text":"# Foundations","x":0,"y":1440,"width":338,"height":58}
 	],
 	"edges":[
 		{"id":"6d2052e1af318dfb","fromNode":"169433e540753d71","fromSide":"right","toNode":"e9633789121c73a9","toSide":"left"},
@@ -14,6 +20,12 @@
 		{"id":"8104357538ef8cee","fromNode":"169433e540753d71","fromSide":"right","toNode":"34ee725be50c3c18","toSide":"left"},
 		{"id":"6982f68bd1d036d8","fromNode":"169433e540753d71","fromSide":"right","toNode":"bbd4d5af826ff2c8","toSide":"left"},
 		{"id":"3c73a0021319b919","fromNode":"e9633789121c73a9","fromSide":"right","toNode":"65d68c887d61305a","toSide":"left"},
-		{"id":"6347f14f2a15669d","fromNode":"e9633789121c73a9","fromSide":"right","toNode":"4511f649924fafdd","toSide":"left"}
+		{"id":"6347f14f2a15669d","fromNode":"e9633789121c73a9","fromSide":"right","toNode":"4511f649924fafdd","toSide":"left"},
+		{"id":"54a0f1c4d9d7c9c9","fromNode":"bddb8d7b7cba96fd","fromSide":"right","toNode":"52858a3499936924","toSide":"left"},
+		{"id":"95176f25e48be521","fromNode":"bddb8d7b7cba96fd","fromSide":"right","toNode":"df1e2ca3e8bac89d","toSide":"left"},
+		{"id":"cf45b667468887fc","fromNode":"bddb8d7b7cba96fd","fromSide":"right","toNode":"1676bafaa2cccc47","toSide":"left"},
+		{"id":"4fc34599ace13d5f","fromNode":"bddb8d7b7cba96fd","fromSide":"right","toNode":"87d7356b54525de4","toSide":"left"},
+		{"id":"a30e1637143c12be","fromNode":"bddb8d7b7cba96fd","fromSide":"right","toNode":"7691b8ac5ad94ee9","toSide":"left"},
+		{"id":"dac1c4014e9d24cf","fromNode":"bddb8d7b7cba96fd","fromSide":"right","toNode":"65074d4d3c5f09cc","toSide":"left"}
 	]
 }
