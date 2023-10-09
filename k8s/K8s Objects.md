@@ -108,4 +108,66 @@ kubectl get namespace
 ### Setting the namespace for a request
 
 ```bash
+kubectl run nginx --image=nginx --namespace=<insert-namespace-name-here>
+kubectl get pods --namespace=<insert-namespace-name-here>
 ```
+
+### Setting the namespace preference
+
+```bash
+# you can permanently save the namespace for all subsequent calls
+kubectl config set-context --current \
+	--namespace=<insert-namespace-name-here>
+kubectl config view --minify | grep namespace:
+```
+
+### Namespaces and DNS
+
+`<service-name>.<namespace-name>.svc.cluster.local`
+
+### Not all objects are in namespace
+
+```bash
+kubectl api-resources --namespaced=true
+kubectl api-resources --namespaced=false
+```
+
+## Annotations
+
+## Field selectors
+
+Examples:
+
+- `metadata.name=my-service`
+- `metadata.namespace!=default`
+- `status.phase=Pending`
+
+```bash
+kubectl get pods --field-selector status.phase=Running
+```
+
+### Supported fields
+
+They vary by resource type. All resource types support the `metadata.name` and `metadata.namespace` fields.
+
+### Supported operators
+
+`=`,`==`, `!=`
+
+### Chained selectors
+
+```bash
+kubectl get pods \
+  --field-selector=status.phase!=Running,spec.restartPolicy=Always
+```
+
+### Multiple resource types
+
+```bash
+kubectl get statefulsets,services --all-namespaces \
+  --field-selector metadata.namespace!=default
+```
+
+### Finalizers
+
+### Owners and Dependents

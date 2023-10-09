@@ -1,11 +1,15 @@
 {
 	"nodes":[
-		{"id":"d124618069cccfb6","type":"text","text":"K8s","x":-154,"y":-283,"width":250,"height":60},
-		{"id":"2dd464c25dac0e24","type":"text","text":"Why","x":-154,"y":-180,"width":250,"height":60},
-		{"id":"5e66142a558d1444","type":"file","file":"k8s/K8s Objects.md","x":-229,"y":-60,"width":400,"height":380}
+		{"id":"743841ec43a7cebb","type":"file","file":"k8s/K8s Components.md","x":-180,"y":284,"width":557,"height":496},
+		{"id":"588836bcdcd17798","type":"text","text":"# Kubernetes","x":-705,"y":-17,"width":325,"height":97},
+		{"id":"9a668e560895a1d3","type":"file","file":"k8s/K8s Objects.md","x":-980,"y":427,"width":658,"height":647},
+		{"id":"e28f22f340a74f66","type":"file","file":"components-of-kubernetes 1.svg","x":-80,"y":1074,"width":1860,"height":869},
+		{"id":"dfa63f905e97bbbf","type":"file","file":"k8s/Manage Kubernetes Objects.md","x":-960,"y":1200,"width":600,"height":420}
 	],
 	"edges":[
-		{"id":"8f37548689a3abbd","fromNode":"d124618069cccfb6","fromSide":"bottom","toNode":"2dd464c25dac0e24","toSide":"top"},
-		{"id":"b90fdde86644bbb9","fromNode":"2dd464c25dac0e24","fromSide":"bottom","toNode":"5e66142a558d1444","toSide":"top"}
+		{"id":"0078a47190a4eed3","fromNode":"743841ec43a7cebb","fromSide":"bottom","toNode":"e28f22f340a74f66","toSide":"top"},
+		{"id":"f192a82a458f2667","fromNode":"588836bcdcd17798","fromSide":"bottom","toNode":"9a668e560895a1d3","toSide":"top"},
+		{"id":"f75a200405a26191","fromNode":"588836bcdcd17798","fromSide":"right","toNode":"743841ec43a7cebb","toSide":"top"},
+		{"id":"35bf7d5f490b5b15","fromNode":"9a668e560895a1d3","fromSide":"bottom","toNode":"dfa63f905e97bbbf","toSide":"top"}
 	]
 }
