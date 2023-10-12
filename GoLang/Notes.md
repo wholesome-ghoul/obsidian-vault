@@ -161,3 +161,25 @@ func ExampleXxx() {
 	// Output: 6
 }
 ```
+
+## parse go file comments
+
+```go
+package main
+
+import (
+	"fmt"
+	"go/token"
+	"go/parser"
+)
+
+func main() {
+	// ou yeah baby
+	fileSet := token.NewFileSet()
+	ast, _ := parser.ParseFile(fileSet, "main.go", nil, parser.ParseComments)
+
+	for _, comment := range ast.Comments {
+		fmt.Println(comment.Text())
+	}
+}
+```
