@@ -31,6 +31,8 @@
 
 ### Two Pointers
 
+- sort colors
+
 ### Traversing from Right
 
 ### Sorting Array
