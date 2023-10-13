@@ -1,3 +1,8 @@
+---
+cards-deck: k8s
+tags: k8s
+---
+
 Persistent entities in K8s system, k8s uses them to represent state of the cluster.
 
 `spec` (desired state) & `status` (current state)
@@ -9,7 +14,7 @@ Required fields:
 - metadata
 - spec
 
-## K8s Object Management
+## K8s Object Management #card
 
 | Management technique      | Operates on          | Recommended environenment |
 | ------------------------- | -------------------- | ------------------------- |
@@ -17,13 +22,13 @@ Required fields:
 | Imperative object config  | Individual files     | Prod projects             |
 | Declarative object config | Directories of files | Prod projects             |
 
-### Imperative commands
+### Imperative commands #card
 
 ```bash
 kubectl create deployment nginx --image nginx
 ```
 
-### Imperative object config
+### Imperative object config #card
 
 ```bash
 kubectl create -f nginx.yaml
