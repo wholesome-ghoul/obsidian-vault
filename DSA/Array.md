@@ -32,6 +32,8 @@
 ### Two Pointers
 
 - sort colors
+- palindromic strings
+- merge sorted array
 
 ### Traversing from Right
 
