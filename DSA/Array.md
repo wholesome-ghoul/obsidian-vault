@@ -37,6 +37,9 @@
 
 ### Traversing from Right
 
+- daily temperatures
+- number of visible people in queue
+
 ### Sorting Array
 
 ### Precomputation
