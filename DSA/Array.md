@@ -42,6 +42,8 @@
 
 ### Sorting Array
 
+- merge intervals
+
 ### Precomputation
 
 ### Index as a Hash Key
