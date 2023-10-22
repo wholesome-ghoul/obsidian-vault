@@ -43,8 +43,11 @@
 ### Sorting Array
 
 - merge intervals
+- non-overlapping intervals
 
 ### Precomputation
+
+- product of array except self
 
 ### Index as a Hash Key
 
