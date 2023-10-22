@@ -12,3 +12,55 @@ bun add -d typescript \
   ts-loader html-webpack-plugin \
   @pmmmwh/react-refresh-webpack-plugin react-refresh
 ```
+
+## Info
+
+```json
+{
+  "name": "@bunch/button",
+  "version": "0.0.1",
+  "description": "Bunch React Button component",
+  "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "", // entry point for user
+  "files": [], // entries to be included when package is installed as dependency
+  "scripts": {
+    "build": ""
+  },
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
+```
+
+## nx
+
+```bash
+nx run-many -t test lint e2e
+nx run-many -t build --skip-nx-cache
+
+nx list @nx/react
+nx list @nx/react
+
+nx g @nx/react:component hello --dry-run
+
+nx graph
+nx graph --affected
+
+nx affected -t build
+```
+
+```json
+// nx.json
+{
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "^build" // run dependent projects' `build` first
+      ]
+    }
+  }
+}
+```
