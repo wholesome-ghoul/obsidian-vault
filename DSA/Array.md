@@ -51,4 +51,7 @@
 
 ### Index as a Hash Key
 
+- first missing positive
+- daily temperatures
+
 ### Traversing More than One
