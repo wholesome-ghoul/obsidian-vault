@@ -74,3 +74,23 @@ func TestFoo(t *testing.T) {
   }
 }
 ```
+
+# Build uri for GET request #card
+<!-- 1698885891488 f24a4c8dd972ca16cd99b9bca5bec9e3 -->
+
+```go
+import "net/url"
+
+func Foo(rawUrl string) string {
+  url, err := url.Parse(rawUrl)
+  // ...
+
+  params := url.Values{
+    "param1": []string{"0"},
+    "param2": []string{string(someValue)},
+  }
+  url.RawQuery = params.Encode()
+
+  return url.String()
+}
+```
