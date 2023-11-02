@@ -62,8 +62,8 @@ err := bencode.Marshal(&byf, someData)
 hash := sha1.Sum(buf.Bytes())
 ```
 
-# Boolean flag example in Golang test #card
-<!-- 1698882536483 0301a5bed4d967517bd2cbdc2c29e98d -->
+# Boolean flag example in go test #card
+<!-- 1698882536483 a83a1ddcb55e6bc623da92e3f4f34457 -->
 
 ```go
 var update = flag.Bool("update", false, "update some files")
@@ -93,4 +93,49 @@ func Foo(rawUrl string) string {
 
   return url.String()
 }
+```
+
+# Write peers parser (Bittorrent client)? #card
+<!-- 1698936230498 f2a2989b6a655a2a785e59fd12a878e2 -->
+
+```go
+import ( 
+  "encoding/binary"
+  "net"
+)
+
+// compact version
+const PeerSize = 6
+
+type Peer {
+  IP net.IP
+  Port uint16
+}
+
+func Parse(rawPeers string) []Peer {
+  numOfPeers := len(rawPeers) / PeerSize
+  peersBin := []byte(rawPeers)
+
+  peers := make([]Peer, numOfPeers)
+  for i := 0; i < numOfPeers; i++ {
+    offset := i * PeerSize
+    peers[i].IP = peersBin[offset:offset+4]
+    peers[i].Port = binary.BigEndian.Uint16(peersBin[offset+4:offset+6])
+  }
+
+  return peers
+}
+```
+
+# Byte sizes of types in go #card
+<!-- 1698936230544 6e62dab6c00c6fd2d49f09a9f013bcf6 -->
+
+```
+bool, int8/uint8 - 1 byte
+int16, uint16 - 2 bytes
+int32, uint32, float32 - 4 bytes
+int64, uint64, float64, pointer - 8 bytes
+string - 16 bytes (2 alignments of 8 bytes)
+any slice takes 24 bytes (3 alignments of 8 bytes)
+array of length n takes n*type of bytes
 ```
