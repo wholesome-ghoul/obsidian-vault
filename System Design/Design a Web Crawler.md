@@ -12,7 +12,7 @@ deck: system-design
 - web monitoring (monitor copyright and trademark infringements/violations)
 
 # Possible questions about designing web crawler #card
-<!-- 1700481908686 0572413ecb16d4d51396d5706a33aae9 -->
+<!-- 1700481908686 b746ce70ced60d424bf8d0ca80482c0f -->
 
 - what is the main purpose of the crawler? Search engine indexing, data mining or something else?
 - How many pages does the crawler collect per month?
@@ -20,6 +20,8 @@ deck: system-design
 - Shall we consider newly added or edited web pages?
 - Do we need to store HTML pages crawled from the web? If yes, for how long?
 - How do we handle web pages with duplicate content?
+- Do we handle server-side rendering?
+- Do we care about analytics?
 
 # What are the characteristics of a good web crawler? #card
 <!-- 1700481908737 bee7af327ca45e0539455b5001f9a263 -->
@@ -154,3 +156,31 @@ Crawler mush periodically recrawl downloaded pages to keep our data set fresh. H
 ## Storage for URL Frontier #include
 
 Storing everything on disk would be a bottleneck for the crawler. Instead, majority of URLs are stored on disk, and to reduce the cost of read/write operations on the disk, we maintain buffers in memory for enqueue/dequeue operations.
+
+# Performance optimization for HTML Downloader in Web Crawler #card
+<!-- 1700544174827 704140c107599fab1f2ba88f37f59d51 -->
+
+1. Distributed crawl
+2. Cache DNS Resolver: DNS Response time ranges from 10ms to 200ms.
+3. Locality
+4. Short timeout: to avoid long wait time, specify maximum wait time.
+
+# Robustness of HTML Downloader in Web Crawler #card
+<!-- 1700544174864 52bca4ca38a371159803b7ec7816b374 -->
+
+- Consistent hashing: helps to distribute load among downloaders. A downloader server can be added or removed using consistent hashing.
+- Save crawl states and data
+- Exception handling
+
+# Extensibility of HTML Downloader in Web Crawler #card
+<!-- 1700544174916 2d1bd05074270cec380fc8be70fa76b2 -->
+
+
+![](figure-9-10-5LXJJMYX.svg)
+
+# Detecting and avoiding problematic content in Web Crawler #card
+<!-- 1700544174953 5ab2ec092096f0b05784bdd5432e3897 -->
+
+1. Redundant content (duplicated web pages)
+2. Spider traps
+3. Data noise (ads, spam URLs, etc)
