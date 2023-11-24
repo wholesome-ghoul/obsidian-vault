@@ -123,7 +123,7 @@ URL Storage stores already visited URLs.
 <!-- AnkiBack:end -->
 
 # Explain URL Frontier in web crawler system design #card
-<!-- 1700490463776 325ed4cf705bc75d218c6b4ef60a8069 -->
+<!-- 1700490463776 13c83a7a7333bcd500dd6f47eb9f973f -->
 
 The URL Frontier ensures politeness, URL prioritization, and freshness.
 
@@ -148,7 +148,7 @@ Combined with politeness manager:
 
 ## Freshness #include
 
-Crawler mush periodically recrawl downloaded pages to keep our data set fresh. However, recrawling all the URLs is time and resource consuming. We could though:
+Crawler must periodically recrawl downloaded pages to keep our data set fresh. However, recrawling all the URLs is time and resource consuming. We could though:
 
 - recrawl based on the web pages' update history
 - prioritize URLs and recrawl important pages first and more frequently
@@ -172,9 +172,8 @@ Storing everything on disk would be a bottleneck for the crawler. Instead, major
 - Save crawl states and data
 - Exception handling
 
-# Extensibility of HTML Downloader in Web Crawler #card
-<!-- 1700544174916 2d1bd05074270cec380fc8be70fa76b2 -->
-
+# Extensibility of Web Crawler #card
+<!-- 1700544174916 11820d9eac15c6d3dcf84d235dd07677 -->
 
 ![](figure-9-10-5LXJJMYX.svg)
 
