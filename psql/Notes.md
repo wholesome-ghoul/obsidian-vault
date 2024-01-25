@@ -29,3 +29,8 @@ pg_ctl -D /usr/local/pgsql/data -l logfile start
 # pg_ctlcluster <version> <cluster> stop
 pg_ctlcluster 13 main stop
 ```
+
+
+```sql
+ALTER TABLE <table-name> RENAME COLUMN <old-name> TO <new-name>;
+```
