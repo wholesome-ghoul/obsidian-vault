@@ -40,7 +40,6 @@ func (t T) String() string
 ## go cli
  ```bash
 # view coverage as html
-go tool -coverprofile coverage.out
 go tool cover -html="coverage.out"
 go tool cover -html="coverage.out" -o coverage.html
 # check cpu prof
@@ -48,6 +47,8 @@ go tool pprof cpu.pprof
 
 # generate benchmark
 go test -bench=. -run=xxx -benchmem -memprofile mem.pprof -cpuprofile cpu.pprof -benchtime=10s > 0.bench
+# generate coverage
+go test -coverprofile coverage.out
 go test -cover
 go test -race
 
