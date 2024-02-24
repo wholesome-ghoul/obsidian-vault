@@ -28,9 +28,60 @@ pg_ctl -D /usr/local/pgsql/data -l logfile start
 # Stop a cluster
 # pg_ctlcluster <version> <cluster> stop
 pg_ctlcluster 13 main stop
+
+# load database
+pg_restore -U postgres -d dvdrental file.tar
 ```
 
 
 ```sql
 ALTER TABLE <table-name> RENAME COLUMN <old-name> TO <new-name>;
+
+-- \l will show all dbs in psql server
+
+-- switch to db
+-- \c databsaename
+
+-- display all tables
+-- \dt
+
+-- all available psql cmds
+-- \?
+
+-- set table output option.
+-- null will be displayed:
+-- \pset null null
+
+-- concatenation
+SELECT
+  first_name || ' ' || last_name,
+  -- with column alias
+  -- first_name || ' ' || last_name AS column_alias,
+  -- first_name || ' ' || last_name column_alias,
+  -- first_name || ' ' || last_name "column alias",
+  email
+FROM
+  customer;
+
+SELECT NOW();
+
+SELECT
+  first_name,
+  LENGTH(last_name) len
+FROM
+  customer
+ORDER BY
+  len DESC;
+
+-- ORDER BY sort_expression [ASC | DESC] [NULLS FIRST | NULLS LAST]
+
+SELECT
+  distinct first_name,
+  last_name,
+FROM
+  customer
+ORDER BY
+  first_name,
+  last_name
+;
 ```
