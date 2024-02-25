@@ -37,6 +37,9 @@ pg_restore -U postgres -d dvdrental file.tar
 ```sql
 ALTER TABLE <table-name> RENAME COLUMN <old-name> TO <new-name>;
 
+-- FROM -> WHERE -> SELECT -> ORDER BY
+-- FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> DISTINCT -> ORDER BY -> LIMIT
+
 -- \l will show all dbs in psql server
 
 -- switch to db
@@ -82,6 +85,255 @@ FROM
   customer
 ORDER BY
   first_name,
+  last_name ;
+
+SELECT
+  first_name,
   last_name
-;
+FROM
+  customer
+WHERE
+  first_name IN ('a', 'b', 'c');
+
+SELECT
+  first_name,
+  LENGTH(first_name) name_length
+FROM
+  customer
+WHERE
+  -- ILIKE is case-insensitive
+  -- ~~ LIKE
+  -- ~~* ILIKE
+  -- !~~ NOT LIKE
+  -- !~~* NOT ILIKE
+  first_name ILIKE '_A%'
+  AND LENGTH(first_name) BETWEEN 3 AND 5
+ORDER BY
+  name_length;
+
+SELECT
+  message
+FROM
+  t
+WHERE
+  -- "regex translation" *10%*
+  message LIKE '%10$%%' ESCAPE '$';
+
+SELECT
+  first_name,
+  last_name,
+FROM
+  customer
+WHERE
+  first_name LIKE 'B%'
+  AND last_name <> 'Motley';
+
+SELECT
+  film_id,
+  title,
+  release_year
+FROM
+  customer
+ORDER BY
+  film_id
+LIMIT 4 OFFSET 3;
+
+-- OFFSET row_to_skip { ROW | ROWS }
+-- FETCH { FIRST | NEXT } [ row_count ] { ROW | ROWS } ONLY
+SELECT
+  film_id,
+  title,
+  release_year
+FROM
+  customer
+ORDER BY
+  title
+OFFSET 5 ROWS
+FETCH FIRST 5 ROWS ONLY;
+
+SELECT
+  payment_id,
+  amount,
+  payment_date
+FROM
+  payment
+WHERE
+  -- ISO 8601 format; YYYY-MM-DD
+  payment_date::date IN ('2007-02-15', '2007-02-16');
+
+SELECT
+  address,
+  address2
+FROM
+  address
+WHERE
+  address2 IS NULL;
+
+SELECT
+  a,
+  fruit_a,
+  b,
+  fruit_b
+FROM
+  basket_a
+-- LEFT JOIN same as LEFT OUTER JOIN
+-- RIGHT JOIN same as RIGHT OUTER JOIN
+-- FULL JOIN same as FULL OUTER JOIN
+INNER JOIN basket_b
+  ON fruit_a = fruit_b;
+
+-- table alias
+SELECT
+  c.customer_id,
+  c.first_name,
+  p.amount,
+  p.payment_date
+FROM
+  customer c
+  INNER JOIN payment p ON p.customer_id = c.customer_id
+ORDER BY
+  p.payment_date DESC;
+
+-- self join
+SELECT
+  f1.title,
+  f2.title,
+  f1.length
+FROM
+  film f
+INNER JOIN film f2
+  ON f1.film_id <> f2.film_id AND
+    f1.length = f2.length;
+
+SELECT
+  customer_id,
+  first_name,
+  last_name,
+  amount,
+  payment_date,
+FROM
+  customer
+  INNER JOIN payment USING(customer_id)
+ORDER BY
+  payment_date;
+
+SELECT
+  c.customer_id,
+  c.first_name || ' ' || c.last_name customer_name,
+  s.first_name || ' ' || s.last_name staff_name,
+  p.amount,
+  p.payment_date
+FROM
+  customer c
+  INNER JOIN payment p USING(customer_id)
+  INNER JOIN staff s USING(staff_id)
+ORDER BY
+  payment_date;
+
+-- cross join
+-- good for scheduling, inventory management etc
+SELECT *
+FROM t1
+CROSS JOIN t2;
+
+-- same as
+SELECT *
+FROM t1,t2
+-- same as
+SELECT *
+FROM t1
+INNER JOINT t2 ON true;
+
+-- NATURAL JOIN
+-- never use it
+
+-- GROUP BY
+SELECT
+  first_name || ' ' || last_name full_name,
+  SUM(amount) amount
+FROM
+  payment
+  INNER JOIN customer USING(customer_id)
+GROUP BY
+  full_name
+ORDER BY
+  amount DESC;
+
+-- HAVING
+SELECT
+  customer_id,
+  SUM(amount) amount
+FROM
+  payment
+GROUP BY
+  customer_id
+HAVING
+  SUM(amount) > 100
+GROUP BY
+  amount DESC;
+
+-- INTERSECT
+-- EXCEPT
+-- UNION [ALL]
+SELECT * FROM top_rated_films
+UNION
+SELECT * FROM most_popular_films;
+
+-- GROUPING SETS
+SELECT
+  brand,
+  segment,
+  SUM(quantity)
+FROM
+  sales
+GROUP BY
+  GROUPING SETS(
+    (brand, segment),
+    (brand),
+    (segment),
+    (),
+  );
+
+SELECT
+  GROUPING(brand) grouping_brand,
+  GROUPING(segment) grouping_segment,
+  brand,
+  segment,
+  SUM(quantity)
+FROM
+  sales
+GROUP BY
+  GROUPING SETS (
+    (brand),
+    (segment),
+    (),
+  )
+HAVING GROUPING(brand) = 0
+ORDER BY
+  brand
+  segment;
+
+SELECT
+  brand,
+  segment,
+  SUM(quantity)
+FROM
+  sales
+GROUP BY
+  CUBE(brand, segment)
+ORDER BY
+  brand,
+  segment;
+
+SELECT
+  brand,
+  segment,
+  SUM(quantity)
+FROM
+  sales
+GROUP BY
+  ROLLUP(brand, segment)
+ORDER BY
+  brand,
+  segment;
 ```
