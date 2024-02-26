@@ -1,5 +1,0 @@
-2024-02-08 15:59:58.676 +04 [11658] LOG:  starting PostgreSQL 13.13 (Debian 13.13-0+deb11u1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
-2024-02-08 15:59:58.676 +04 [11658] LOG:  listening on IPv6 address "::1", port 5432
-2024-02-08 15:59:58.676 +04 [11658] LOG:  listening on IPv4 address "127.0.0.1", port 5432
-2024-02-08 15:59:58.677 +04 [11658] FATAL:  could not create lock file "/var/run/postgresql/.s.PGSQL.5432.lock": Permission denied
-2024-02-08 15:59:58.678 +04 [11658] LOG:  database system is shut down
