@@ -336,4 +336,87 @@ GROUP BY
 ORDER BY
   brand,
   segment;
+
+SELECT
+  city
+FROM
+  city
+WHERE
+  country_id = (
+    SELECT
+      country_id
+    FROM
+      country
+    WHERE
+      country = 'Name'
+  )
+ORDER BY
+  city;
+
+-- SOME/ANY
+-- ALL
+-- EXISTS
+SELECT
+  *
+FROM
+  employess
+WHERE
+  salary > ANY (
+    SELECT
+      salary
+    FROM
+      managers
+  );
+
+-- common table expression (CTE)
+WITH action_films AS (
+  SELECT
+    f.title,
+    f.length
+  FROM
+    film f
+    INNER JOIN film_category fc USING(film_id)
+    INNER JOIN category c USING(category_id)
+  WHERE
+    c.name = 'Action'
+)
+SELECT * FROM action_films;
+
+WITH cte_rental AS (
+  SELECT
+    staff_id,
+    COUNT(rental_id) rental_count
+  FROM
+    rental
+  GROUP BY
+    staff_id
+)
+SELECT
+  s.staff_id,
+  first_name,
+  last_name,
+  rental_count
+FROM
+  staff s
+  INNER JOIN cte_rental USING(staff_id);
+
+WITH film_stats AS (
+  SELECT
+    AVG(rental_rate) AS avg_rental_rate,
+    MAX(rental_rate) AS max_length,
+    MIN(rental_rate) AS min_length
+  FROM film
+),
+customer_stats AS (
+  SELECT
+    COUNT(DISTINCT customer_id) AS total_customers,
+    SUM(amount) AS total_payments
+  FROM payment
+)
+SELECT
+  ROUND((SELECT avg_rental_rate FROM film_stats), 2) AS avg_film_rental_rate,
+  (SELECT max_length FROM film_stats) AS max_film_length,
+  (SELECT min_length FROM film_stats) AS min_film_length,
+  (SELECT total_customers FROM customer_stats) AS total_customers,
+  (SELECT total_payments FROM customer_stats) AS total_payments;
 ```
