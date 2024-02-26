@@ -39,6 +39,20 @@ ALTER TABLE <table-name> RENAME COLUMN <old-name> TO <new-name>;
 
 -- FROM -> WHERE -> SELECT -> ORDER BY
 -- FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> DISTINCT -> ORDER BY -> LIMIT
+-- 
+-- USING clause is not a part of the SQL standard
+--
+-- Boolean
+-- Character CHAR(n), VARCHAR(n), TEXT
+-- Numeric SMALLINT, INT, Serial, float(n), real or float8, numeric or numeric(p,s)
+-- Temporal DATE, TIME, TIMESTAMP, TIMESTAMPZ, INTERVAL
+-- UUID
+-- Array
+-- JSON JSON, JSONB
+-- hstore
+-- Special box, line, point, lseg, polygon, inet, macaddr
+--
+-- column constraints: PRIMARY KEY, FOREIGN KEY, NOT NULL, UNIQUE, CHECK, DEFAULT
 
 -- \l will show all dbs in psql server
 
@@ -419,4 +433,135 @@ SELECT
   (SELECT min_length FROM film_stats) AS min_film_length,
   (SELECT total_customers FROM customer_stats) AS total_customers,
   (SELECT total_payments FROM customer_stats) AS total_payments;
+
+WITH RECURSIVE subordinates AS (
+  SELECT 
+    employee_id, 
+    manager_id, 
+    full_name 
+  FROM 
+    employees 
+  WHERE 
+    employee_id = 2 
+  UNION 
+  SELECT 
+    e.employee_id, 
+    e.manager_id, 
+    e.full_name 
+  FROM 
+    employees e 
+    INNER JOIN subordinates s ON s.employee_id = e.manager_id
+) 
+SELECT * FROM subordinates;
+
+INSERT INTO links (url, name)
+VALUES
+  ('url1', 'name1'),
+  ('url2', 'name2'),
+  ('url3', 'name3')
+RETURNING *;
+
+UPDATE courses
+SET published_date = 'date'
+WHERE course_id = 2
+RETURNING *;
+
+UPDATE courses
+SET price = price * 1.05;
+
+UPDATE 
+  product
+SET 
+  net_price = price - price * discount
+FROM
+  product_segment s
+WHERE
+  p.segment_id = s.id;
+
+DELETE FROM 
+  todos
+WHERE   
+  id = 1
+RETURNING *;
+
+DELETE from todos;
+
+DELETE FROM member m
+USING denylist d
+WHERE m.phone = d.phone;
+
+DELETE FROM member
+WHERE phone IN (
+  SELECT
+    phone
+  FROM
+    denylist
+);
+
+-- UPSERT
+INSERT INTO inventory (id, name, price, quantity)
+VALUES (1, 'D', 29.99, 20)
+ON CONFLICT(id)
+DO UPDATE SET
+  price = EXCLUDED.price,
+  quantity = EXCLUDED.quantity;
+
+-- [BEGIN | COMMIT | ROLLBACK] [ | WORK | TRANSACTION]
+BEGIN;
+INSERT INTO accounts(name,balance)
+VALUES('A', 10000)
+COMMIT;
+
+BEGIN;
+UPDATE accounts
+SET balance = balance - 1000
+WHERE id = 1;
+ROLLBACK;
+
+-- copying from CSV
+\copy persons(first_name,last_name,dob,email)
+FROM 'path'
+DELIMITER ','
+CSV HEADER;
+
+-- copying to csv file
+\copy persons
+TO 'path'
+DELIMITER ','
+CSV HEADER;
+
+\copy (SELECT * FROM persons) to 'path' with csv;
+
+SELECT *
+INTO TEMP TABLE film_r
+FROM film
+WHERE rating = 'R'
+ORDER BY title;
+
+CREATE TEMP TABLE IF NOT EXISTS film_rating (rating, film_count)
+AS
+SELECT
+  rating,
+  COUNT(film_id)
+FROM
+  film
+GROUP BY
+  rating;
+
+CREATE TABLE fruits(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR NOT NULL
+);
+INSERT INTO fruits(id,name)
+VALUES(DEFAULT,'Orange')
+RETURNING id;
+
+-- not transaction-safe
+SELECT currval(pg_get_serial_sequence('fruits', 'id'));
+
+CREATE TABLE baskets(
+  name VARCHAR(255) NOT NULL
+);
+ALTER TABLE baskets
+ADD COLUMN id SERIAL PRIMARY KEY;
 ```
