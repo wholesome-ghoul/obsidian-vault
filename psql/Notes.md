@@ -89,8 +89,6 @@ SELECT
 FROM
   customer;
 
-SELECT NOW();
-
 SELECT
   first_name,
   LENGTH(last_name) len
@@ -382,7 +380,7 @@ ORDER BY
 SELECT
   *
 FROM
-  employess
+  employees
 WHERE
   salary > ANY (
     SELECT
@@ -727,4 +725,184 @@ CREATE TABLE users (
     )
   )
 );
+
+-- DATE data type
+-- YYYY-MM-DD
+CREATE TABLE documents (
+  document_id serial PRIMARY KEY, 
+  header_text VARCHAR (255) NOT NULL, 
+  posting_date DATE NOT NULL DEFAULT CURRENT_DATE
+);
+
+SELECT NOW()::date;
+SELECT CURRENT_DATE;
+SELECT TO_CHAR(CURRENT_DATE, 'dd/mm/yyyy');
+SELECT TO_CHAR(CURRENT_DATE, 'Mon dd, yyyy');
+SELECT first_name, NO() - hire_date as diff FROM employees;
+
+SELECT
+	employee_id,
+	first_name,
+	last_name,
+	AGE(birth_date)
+FROM
+	employees;
+
+SELECT EXTRACT (YEAR FROM CURRENT_DATE) AS YEAR;
+
+-- TIMESTAMP & TIMESTAMPZ
+-- both 8 bytes
+SELECT 
+  typname, 
+  typlen 
+FROM 
+  pg_type 
+WHERE 
+  typname ~ '^timestamp';
+
+SHOW TIMEZONE;
+
+SELECT CURRENT_TIMESTAMP;
+SELECT CURRENT_TIME;
+SELECT TIMEOFDAY();
+
+-- convert time to another timezone's time
+SELECT timezone('America/Los_Angeles','2016-06-01 00:00'::timestamptz);
+
+-- INTERVAL
+-- @ interval [ fields ] [ (p) ]
+-- quantity unit [quantity unit...] [direction]
+SELECT
+	now(),
+	now() - INTERVAL '1 year 3 hours 20 minutes' 
+             AS "3 hours 20 minutes ago of last year";
+
+SET intervalstyle = 'sql_standard';
+SELECT 
+  INTERVAL '6 years 5 months 4 days 3 hours 2 minutes 1 second';
+--  +6-5 +4 +3:02:01
+
+SET intervalstyle = 'postgres';
+SELECT 
+  INTERVAL '6 years 5 months 4 days 3 hours 2 minutes 1 second';
+--  6 years 5 mons 4 days 03:02:01
+
+SET intervalstyle = 'postgres_verbose';
+SELECT 
+  INTERVAL '6 years 5 months 4 days 3 hours 2 minutes 1 second';
+--  @ 6 years 5 mons 4 days 3 hours 2 mins 1 sec
+
+SET intervalstyle = 'iso_8601';
+SELECT 
+  INTERVAL '6 years 5 months 4 days 3 hours 2 minutes 1 second';
+-- P6Y5M4DT3H2M1S
+
+SELECT
+    TO_CHAR(
+        INTERVAL '17h 20m 05s',
+        'HH24:MI:SS'
+    );
+
+SELECT
+    EXTRACT (
+        MINUTE
+        FROM
+            INTERVAL '5 hours 21 minutes'
+    );
+
+SELECT
+    justify_days(INTERVAL '30 days'),
+    justify_hours(INTERVAL '24 hours'),
+    justify_interval(interval '1 year -1 hour');
+
+-- TIME
+-- HH:MI or HH:MI:SS.ppppp or HHMISS.ppppp
+-- 00:00:00-24:00:00
+SELECT LOCALTIME(N);
+SELECT LOCALTIME AT TIME ZONE 'UTC-7';
+
+-- UUID
+SELECT gen_random_uuid();
+
+-- ARRAY
+CREATE TABLE contacts (
+  id SERIAL PRIMARY KEY, 
+  name VARCHAR (100), 
+  phones TEXT []
+);
+INSERT INTO contacts (name, phones)
+VALUES('John Doe',ARRAY [ '(408)-589-5846','(408)-589-5555' ]);
+SELECT
+  name,
+  phones[1]
+FROM
+  contacts;
+
+SELECT 
+  name, 
+  phones 
+FROM 
+  contacts 
+WHERE 
+  '(408)-589-5555' = ANY (phones);
+
+SELECT
+  name,
+  unnest(phones)
+FROM
+  contacts;
+
+-- hstore
+CREATE EXTENSION hstore;
+CREATE TABLE books (
+	id serial primary key,
+	title VARCHAR (255),
+	attr hstore
+);
+SELECT
+	attr -> 'key-name' as name
+FROM
+	books;
+
+-- add or update key/value
+UPDATE books
+SET attr = attr || '"freeshipping"=>"yes"' :: hstore;
+UPDATE books
+SET attr = delete(attr, 'freeshipping');
+
+SELECT
+	title
+FROM
+	books
+WHERE
+	attr @> '"weight"=>"11.2 ounces"' :: hstore;
+
+SELECT
+	title
+FROM
+	books
+WHERE
+	attr ?& ARRAY [ 'language', 'weight' ];
+
+SELECT
+	-- avals (attr)
+	-- svals (attr)
+	-- skeys (attr)
+	akeys (attr)
+FROM
+	books;
+
+-- from hstore to json
+SELECT
+  title,
+  hstore_to_json (attr) json
+FROM
+  books;
+
+-- hstore data to sets
+SELECT
+	title,
+	(EACH(attr) ).*
+FROM
+	books;
 ```
