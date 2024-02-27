@@ -738,7 +738,7 @@ SELECT NOW()::date;
 SELECT CURRENT_DATE;
 SELECT TO_CHAR(CURRENT_DATE, 'dd/mm/yyyy');
 SELECT TO_CHAR(CURRENT_DATE, 'Mon dd, yyyy');
-SELECT first_name, NO() - hire_date as diff FROM employees;
+SELECT first_name, NOW() - hire_date as diff FROM employees;
 
 SELECT
 	employee_id,
@@ -905,4 +905,71 @@ SELECT
 	(EACH(attr) ).*
 FROM
 	books;
+
+-- JSON
+CREATE TABLE products(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    properties JSONB
+);
+SELECT 
+  id, 
+  name, 
+  properties ->> 'color' color 
+FROM 
+  products 
+WHERE 
+  properties ->> 'color' IN ('black', 'white');
+
+SELECT
+  title,
+  length,
+  CASE 
+    WHEN length > 0 AND length <= 50 THEN 'Short'
+    WHEN length > 50 AND length <= 120 THEN 'Medium'
+    WHEN length > 120 THEN 'Long'
+  END duration
+FROM
+  film
+ORDER BY
+  title;
+
+SELECT 
+  SUM (
+    CASE WHEN rental_rate = 0.99 THEN 1 ELSE 0 END
+  ) AS "Economy", 
+  SUM (
+    CASE WHEN rental_rate = 2.99 THEN 1 ELSE 0 END
+  ) AS "Mass", 
+  SUM (
+    CASE WHEN rental_rate = 4.99 THEN 1 ELSE 0 END
+  ) AS "Premium" 
+FROM 
+  film;
+
+-- COALESCE
+CREATE TABLE items (
+  id SERIAL PRIMARY KEY, 
+  product VARCHAR (100) NOT NULL, 
+  price NUMERIC NOT NULL, 
+  discount NUMERIC
+);
+SELECT 
+  product, 
+  (
+    price - COALESCE(discount, 0)
+  ) AS net_price 
+FROM 
+  items;
+
+SELECT NULLIF(1,1); -- NULL
+
+SELECT CAST('100' AS INTEGER);
+SELECT '{1,2,3}'::INTEGER[] AS result_array;
+SELECT 
+  '15 minute' :: interval, 
+  '2 hour' :: interval, 
+  '1 day' :: interval, 
+  '2 week' :: interval, 
+  '3 month' :: interval;
 ```
