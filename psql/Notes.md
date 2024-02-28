@@ -972,4 +972,7 @@ SELECT
   '1 day' :: interval, 
   '2 week' :: interval, 
   '3 month' :: interval;
+
+-- grant privileges to user
+GRANT ALL privileges ON database dbname TO username;
 ```
