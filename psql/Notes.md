@@ -64,6 +64,7 @@ ALTER TABLE <table-name> RENAME COLUMN <old-name> TO <new-name>;
 -- on NUMERIC values are typically slower than integers, floats, and double precisions.
 
 -- \l will show all dbs in psql server
+-- \i <path-to-sql>
 
 -- switch to db
 -- \c databsaename
