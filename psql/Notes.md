@@ -976,4 +976,6 @@ SELECT
 
 -- grant privileges to user
 GRANT ALL privileges ON database dbname TO username;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO myuser;
+ALTER USER my_user WITH PASSWORD '';
 ```
