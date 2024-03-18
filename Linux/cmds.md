@@ -9,3 +9,7 @@ deck: linux
 ```bash
 for i in {1..6}; do curl http://localhost:8080;done
 ```
+
+```bash
+taskset --cpu-list 0-2 <cmd>
+```
