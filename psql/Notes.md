@@ -31,6 +31,9 @@ pg_ctlcluster 13 main stop
 
 # load database
 pg_restore -U postgres -d dvdrental file.tar
+
+docker run --rm -v $HOME:/data --name postgres13 -e POSTGRES_PASSWORD=pass postgres:13.14
+docker exet -it postgres13 bash -c "echo 'set -o vi'>~/.bashrc && echo 'set editing-mode vi'>~/.inputrc && bash"
 ```
 
 

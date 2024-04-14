@@ -41,6 +41,11 @@ docker tag <local-image>:tag <username>/<remote-name>:tag
 docker push <username>/<remote-name>:tag
 
 docker history [options] <image>
+
+docker inspect <name>
+
+# vi mode
+docker exec -it <name> bash -c "echo 'set -o vi'>~/.bashrc && echo 'set editing-mode vi'>~/.inputrc && bash"
 ```
 
 ```bash
