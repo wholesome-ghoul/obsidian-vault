@@ -472,6 +472,11 @@ VALUES
   ('url3', 'name3')
 RETURNING *;
 
+INSERT INTO table
+  SELECT
+    (SELECT max(id) FROM table) + 1,
+    col2, col3;
+
 UPDATE courses
 SET published_date = 'date'
 WHERE course_id = 2
@@ -489,11 +494,23 @@ FROM
 WHERE
   p.segment_id = s.id;
 
+UPDATE cd.facilities facs
+  SET
+    membercost = facs2.membercost * 1.1,
+    guestcost = facs2.guestcost * 1.1
+  FROM (SELECT * FROM cd.facilities WHERE facid = 0) facs2
+  WHERE facs.facid = 1;
+
 DELETE FROM 
   todos
 WHERE   
   id = 1
 RETURNING *;
+
+-- Uncorrelated subquery
+DELETE FROM cd.members WHERE memid NOT IN (SELECT memid FROM cd.bookings);
+-- Correlated subquery
+DELETE FROM cd.members WHERE NOT EXISTS (SELECT 1 FROM cd.bookings WHERE memid = mems.memid);
 
 DELETE from todos;
 
