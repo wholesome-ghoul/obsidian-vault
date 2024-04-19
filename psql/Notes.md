@@ -363,6 +363,37 @@ ORDER BY
   segment;
 
 SELECT
+  facid,
+  date_part('month', starttime) AS month,
+  SUM(slots) AS slots
+FROM
+  cd.bookings
+WHERE
+  date_part('month', starttime) = 2012
+GROUP BY
+  ROLLUP(facid, month)
+ORDER BY
+  facid,
+  month;
+
+WITH bookings AS (
+  SELECT
+    facid,
+    date_part('month', starttime) AS month,
+    slots
+  FROM
+    cd.bookings
+  WHERE
+    date_part('year', starttime) = 2012
+)
+SELECT facid, month, SUM(slots) FROM bookings GROUP BY facid, month
+UNION ALL
+SELECT facid, null, SUM(slots) FROM bookings GROUP BY facid
+UNION ALL
+SELECT null, null, SUM(slots) FROM bookings
+ORDER BY facid, month;
+
+SELECT
   city
 FROM
   city
@@ -444,6 +475,21 @@ SELECT
   (SELECT min_length FROM film_stats) AS min_film_length,
   (SELECT total_customers FROM customer_stats) AS total_customers,
   (SELECT total_payments FROM customer_stats) AS total_payments;
+
+SELECT
+  facid,
+  name,
+  ROUND((SUM(slots) / 2.0), 2) AS "Total Hours"
+FROM
+  cd.bookings
+INNER JOIN
+  cd.facilities
+USING(facid)
+GROUP BY
+  facid,
+  name
+ORDER BY
+  facid;
 
 WITH RECURSIVE subordinates AS (
   SELECT 
