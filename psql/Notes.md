@@ -42,6 +42,7 @@ ALTER TABLE <table-name> RENAME COLUMN <old-name> TO <new-name>;
 
 -- FROM -> WHERE -> SELECT -> ORDER BY
 -- FROM -> WHERE -> GROUP BY -> HAVING -> SELECT -> DISTINCT -> ORDER BY -> LIMIT
+-- window function always performs calculations after JOIN, WHERE, GROUP BY and HAVING
 -- 
 -- USING clause is not a part of the SQL standard
 --
@@ -392,6 +393,42 @@ SELECT facid, null, SUM(slots) FROM bookings GROUP BY facid
 UNION ALL
 SELECT null, null, SUM(slots) FROM bookings
 ORDER BY facid, month;
+
+-- window functions
+SELECT
+  COUNT(*) OVER(),
+  firstname,
+  surname
+FROM
+  cd.members
+ORDER BY
+  joindate;
+
+SELECT
+  ROW_NUMBER() OVER(
+    ORDER BY joindate ASC
+  ),
+  firstname,
+  surname
+FROM
+  cd.members;
+
+SELECT
+  facid,
+  total FROM (
+    SELECT
+      facid,
+      SUM(slots) total,
+      RANK() OVER(
+        ORDER BY SUM(slots) DESC
+      )
+    FROM
+      cd.bookings
+    GROUP BY
+      facid
+  ) as ranked
+WHERE
+  rank = 1;
 
 SELECT
   city
