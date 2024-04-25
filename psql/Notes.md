@@ -528,6 +528,82 @@ GROUP BY
 ORDER BY
   facid;
 
+SELECT
+  name,
+  rank
+FROM
+  (
+    SELECT
+      name,
+      RANK() OVER(
+        ORDER BY SUM(CASE WHEN memid = 0 THEN slots * guestcost ELSE slots * membercost END) DESC
+      )
+    FROM
+      cd.bookings
+    INNER JOIN
+      cd.facilities
+    USING(facid)
+    GROUP BY
+      name
+  ) as subq
+WHERE
+  rank <= 3
+ORDER BY
+  rank,
+  name;
+
+SELECT
+  name,
+  CASE
+    WHEN class = 1 THEN 'high'
+    WHEN class = 2 THEN 'average'
+    ELSE 'low'
+  end revenue
+FROM
+  (
+    SELECT
+      name,
+      NTILE(3) OVER(
+        ORDER BY SUM(CASE WHEN memid = 0 THEN slots * guestcost ELSE slots * membercost END) DESC
+      ) as class
+    FROM
+      cd.bookings
+    INNER JOIN
+      cd.facilities
+    USING(facid)
+    GROUP BY
+      name
+  ) as subq
+ORDER BY
+  class,
+  name;
+
+SELECT
+  firstname,
+  surname,
+  hours,
+  RANK() OVER(
+    ORDER BY hours DESC
+  )
+FROM
+  (
+    SELECT
+      firstname,
+      surname,
+      ((SUM(slots) + 10)/20)*10 AS hours
+    FROM
+      cd.members
+    INNER JOIN
+      cd.bookings
+    USING(memid)
+    GROUP BY
+      memid
+  ) as subq
+ORDER BY
+  rank,
+  surname,
+  firstname;
+
 WITH RECURSIVE subordinates AS (
   SELECT 
     employee_id, 
