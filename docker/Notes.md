@@ -21,6 +21,9 @@ docker compose up -d
 docker compose up
 docker compose down
 docker compose -f <filename> up
+docker compose up --scale <name>=N
+docker compose port --index <i> <name> <port>
+docker compose ps -q <name>
 
 docker volume ls
 
@@ -43,6 +46,17 @@ docker push <username>/<remote-name>:tag
 docker history [options] <image>
 
 docker inspect <name>
+docker container inspect <name> | grep -A 5 Mounts
+
+docker logs -f <name>
+docker start <name>
+docker attach [--no-stdin] <name>
+
+docker search <image-name>
+
+docker cp ./file <name>:/path
+docker diff <name>
+docker commit <name> <new-name>
 
 # vi mode
 docker exec -it <name> bash -c "echo 'set -o vi'>~/.bashrc && echo 'set editing-mode vi'>~/.inputrc && bash"
