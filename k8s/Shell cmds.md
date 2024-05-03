@@ -27,6 +27,8 @@ minikube ip
 # kubectl
 
 ```bash
+kubectl explain <resource>
+
 kubectl create deployment hello-node \
 	--image=registry.k8s.io/e2e-test-images/agnhost:2.39 -- \
 	/agnhost netexec --http-port=8080
@@ -54,6 +56,8 @@ kubectl scale deployments/<name> --replicas=4
 
 # update image
 kubectl set image deployments/<name> <image-name>=<image-name>:<version>
+
+kubectl cluster-info
 ```
 
 ## get resource
@@ -73,6 +77,8 @@ kubectl get pods -l app=<label>
 kubectl get pods [-o wide|yaml]
 # view the pod and service
 kubectl get pod,svc -n kube-system
+
+kubectl port-forward <name> <port>:<port>
 ```
 
 ## service
@@ -106,4 +112,15 @@ kubectl describe services <service-name>
 kubectl get pods --output=wide
 kubectl delete services <service-name>
 kubectl delete deployment <name>
+```
+
+# K3s
+
+```bash
+k3d cluster create -a 2 [--no-lb]
+k3d cluster stop
+k3d cluster start
+k3d cluster delete
+
+k3d kubeconfig get k3s-default
 ```
