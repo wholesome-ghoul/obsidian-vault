@@ -43,11 +43,13 @@ kubectl delete deployments/<name> services/<name>
 kubectl proxy
 
 kubectl logs <pod-name>
+kubectl logs -f <pod-name>
 kubectl logs <pod-name> -c <container-name>
 
 # kubectl exec <pod-name> -- <cmd>
 # start bash session
 kubectl exec -it <pod-name> -- bash
+kubectl exec -it <pod-name> -c <container-name> -- /bin/bash
 
 # apply new label
 kubectl label pods <pod-name> version=v1
@@ -121,6 +123,7 @@ k3d cluster create -a 2 [--no-lb]
 k3d cluster stop
 k3d cluster start
 k3d cluster delete
+k3d cluster create --port 8082:30080@agent:0 -p 8081:80@loadbalancer --agents 2
 
 k3d kubeconfig get k3s-default
 ```
