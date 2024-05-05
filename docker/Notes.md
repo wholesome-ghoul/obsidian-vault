@@ -3,6 +3,7 @@
 docker system prune
 # remove any stopped containers, all unused images
 docker system prune -a
+docker system info
 
 docker build -t <name> .
 

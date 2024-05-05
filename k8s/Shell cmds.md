@@ -1,10 +1,12 @@
 # minikube
 
 ```bash
+minikube delete --all
 minikube start
 
 eval $(minikube docker-env)
 
+# with appropriate kubectl version
 minikube kubectl -- get pods -A
 
 minikube dashboard [--url]
@@ -33,6 +35,7 @@ kubectl create deployment hello-node \
 	--image=registry.k8s.io/e2e-test-images/agnhost:2.39 -- \
 	/agnhost netexec --http-port=8080
 
+# ~/.kube/config
 kubectl config view
 
 kubectl delete service hello-node
@@ -41,6 +44,9 @@ kubectl delete service -l app=<name>
 kubectl delete deployments/<name> services/<name>
 
 kubectl proxy
+
+# mk addons enable metrics-server
+kubectl top po
 
 kubectl logs <pod-name>
 kubectl logs -f <pod-name>
@@ -114,6 +120,17 @@ kubectl describe services <service-name>
 kubectl get pods --output=wide
 kubectl delete services <service-name>
 kubectl delete deployment <name>
+```
+
+## Deploy applications
+
+```bash
+kubectl create deployment hello-minikube --image=kicbase/echo-server:1.0
+kubectl expose deployment hello-minikube --type=NodePort --port=8080
+kubectl get services hello-minikube
+minikube service hello-minikube
+# or
+kubectl port-forward service/hello-minikube 8080:8080
 ```
 
 # K3s
