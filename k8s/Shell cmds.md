@@ -81,6 +81,8 @@ kubectl get nodes
 kubectl get services
 kubectl get rs
 kubectl get pods -l app=<label>
+kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}'
+kubectl get pods <pod-name> -o jsonpath='{.spec.containers[*].name}'
 # kubectl get pods --output=wide
 kubectl get pods [-o wide|yaml]
 # view the pod and service
