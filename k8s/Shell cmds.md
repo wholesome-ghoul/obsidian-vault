@@ -66,6 +66,8 @@ kubectl scale deployments/<name> --replicas=4
 kubectl set image deployments/<name> <image-name>=<image-name>:<version>
 
 kubectl cluster-info
+
+kubectl create configmap <name> --from-literal=key=value
 ```
 
 ## get resource
@@ -106,6 +108,7 @@ kubectl rollout status deployments/<name>
 kubectl rollout undo deployments/<name>
 
 kubectl edit svg/<service-name>
+kubectl edit configmap <name>
 ```
 
 ## Exposing an External IP Address to Access an Application in a Cluster
