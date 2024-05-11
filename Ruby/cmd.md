@@ -1,5 +1,9 @@
 # Ruby
 
+```bash
+gem install rails
+```
+
 ## Rails
 
 ```bash
