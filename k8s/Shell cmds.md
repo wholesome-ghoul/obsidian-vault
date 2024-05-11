@@ -106,6 +106,9 @@ kubectl expose deployment hello-node \
 # confirm update
 kubectl rollout status deployments/<name>
 kubectl rollout undo deployments/<name>
+# For example, we've updated env variable in a Pod via ConfigMap.
+# We now have to replace the existing Pod with the new one.
+kubectl rollout restart deployments/<name>
 
 kubectl edit svg/<service-name>
 kubectl edit configmap <name>
