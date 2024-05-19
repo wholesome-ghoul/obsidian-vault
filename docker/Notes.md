@@ -61,6 +61,8 @@ docker commit <name> <new-name>
 
 # vi mode
 docker exec -it <name> bash -c "echo 'set -o vi'>~/.bashrc && echo 'set editing-mode vi'>~/.inputrc && bash"
+
+docker exec -it <name> bash -c "echo 'set -o vi'>~/.bashrc && echo 'set editing-mode vi'>~/.inputrc && su - postgres -c 'psql'"
 ```
 
 ```bash
