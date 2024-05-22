@@ -18,4 +18,7 @@ sudo lshw -c display
 
 # ls open files
 lsof -t -i:3000
+
+# cuda version
+nvcc --version
 ```
