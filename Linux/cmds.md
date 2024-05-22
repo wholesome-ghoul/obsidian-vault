@@ -15,6 +15,8 @@ taskset --cpu-list 0-2 <cmd>
 
 # gpu info
 sudo lshw -c display
+# mem info
+sudo lshw -c memory
 
 # ls open files
 lsof -t -i:3000
