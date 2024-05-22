@@ -12,4 +12,10 @@ for i in {1..6}; do curl http://localhost:8080;done
 
 ```bash
 taskset --cpu-list 0-2 <cmd>
+
+# gpu info
+sudo lshw -c display
+
+# ls open files
+lsof -t -i:3000
 ```
