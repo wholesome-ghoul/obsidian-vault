@@ -1,3 +1,2 @@
-# Cognitive Biases
-
-https://thedecisionlab.com/biases
+- https://thedecisionlab.com/biases
+- commoncrawl
