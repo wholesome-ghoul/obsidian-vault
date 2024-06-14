@@ -27,4 +27,7 @@ nvcc --version
 # nvidia gpu watch
 watch -n 1 nvidia-smi
 watch -n 1 nvidia-smi --query-gpu=timestamp,pstate,temperature.gpu,utilization.gpu,utilization.memory,memory.total,memory.free,memory.used --format=csv
+
+# terminal size
+stty size
 ```

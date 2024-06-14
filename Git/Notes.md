@@ -1,3 +1,10 @@
+# Notes
+
+```bash
+# before fetching removes any remote-tracking references that no longer exist on the remote
+git fetch --prune
+```
+
 ## Sync forked repo with original (upstream) repo
 ```bash
 git remote add upstream <original-repo-url>
