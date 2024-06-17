@@ -75,6 +75,8 @@ ALTER TABLE <table-name> RENAME COLUMN <old-name> TO <new-name>;
 
 -- display all tables
 -- \dt
+-- list all tables of schema
+-- \dt <schema>.*
 
 -- all available psql cmds
 -- \?
