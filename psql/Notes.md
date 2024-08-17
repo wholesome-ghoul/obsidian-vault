@@ -85,6 +85,10 @@ ALTER TABLE <table-name> RENAME COLUMN <old-name> TO <new-name>;
 -- null will be displayed:
 -- \pset null null
 
+-- check connection info; user
+-- \conninfo
+
+
 -- concatenation
 SELECT
   first_name || ' ' || last_name,
