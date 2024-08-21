@@ -21,6 +21,9 @@ sudo lshw -c memory
 # ls open files
 lsof -t -i:3000
 
+# get info about pid
+ps -p (lsof -t -i:50053) -o pid,vsz=MEMORY -o user,group=GROUP -o comm,args=ARGS
+
 # cuda version
 nvcc --version
 
