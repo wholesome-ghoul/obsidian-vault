@@ -33,4 +33,35 @@ watch -n 1 nvidia-smi --query-gpu=timestamp,pstate,temperature.gpu,utilization.g
 
 # terminal size
 stty size
+
+# iproute2 contains ss utility
+sudo apt install iproute2 netcat-openbsd socat
+
+# fork ensures that socat continues to run after it handles a connection
+socat TCP4-LISTEN:8080,fork /dev/null&
+socat TCP6-LISTEN:8080,ipv6only=1,fork /dev/null&
+
+# examine IPv4 sockets
+# tcp only, listening sockets only, port numbers instead of service names
+ss -4 -tln
+
+# -z flag ensures to connect to a socket without sending any data
+nc -4 -vz 127.0.0.1 8080
+nc -6 -vz ::1 8080
+
+# run fg command for each socat process we've created
+
+sudo socat UDP4-LISTEN:8080,fork /dev/null&
+sudo socat UDP6-LISTEN:8080,ipv6only=1,fork /dev/null&
+ss -4 -uln
+ss -6 -uln
+nc -4 -u -vz 127.0.0.1 123
+nc -6 -u -vz ::1 123
+
+socat unix-listen:/tmp/stream.sock,fork /dev/null&
+socat unix-recvfrom:/tmp/datagram.sock,fork /dev/null&
+ss -xln
+stat /tmp/stream.sock /tmp/datagram.sock
+nc -U -z /tmp/stream.sock
+nc -uU -z /tmp/datagram.sock
 ```
