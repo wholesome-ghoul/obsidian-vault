@@ -64,4 +64,7 @@ ss -xln
 stat /tmp/stream.sock /tmp/datagram.sock
 nc -U -z /tmp/stream.sock
 nc -uU -z /tmp/datagram.sock
+
+# show current keyboard layout gui
+gkbd-keyboard-display -l <layout>
 ```
